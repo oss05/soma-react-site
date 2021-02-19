@@ -80,6 +80,19 @@ const InfoHoverCard = ( {img,title,description,logo} ) => {
     },
     bg: {
       backgroundColor: 'white'
+    },
+    animationSweet: {
+      animationName: '$entradaSuave',
+      animationDuration: '2s',
+      animationTimingFunction: 'ease',
+    },
+    '@keyframes entradaSuave': {
+      from: { 
+        opacity: '0',
+      },
+      to: {
+        opacity: '1',
+      }
     }
   }));
 
@@ -114,13 +127,14 @@ const InfoHoverCard = ( {img,title,description,logo} ) => {
           align="center"
           className={classes.detailsContainer}>
             <Box
-            className={classes.logoContainer}>
+            className={`${classes.logoContainer} ${classes.animationSweet}`} 
+            >
               <img src={logo} alt="logo servicio"/>
             </Box>
-            <Typography className={classes.title} variant="h5" component="h2" align="center">
+            <Typography className={`${classes.title} ${classes.animationSweet}`} variant="h5" component="h2" align="center">
               {title}
             </Typography>
-            <Typography component="h2" align="center">
+            <Typography className={classes.animationSweet} component="h2" align="center">
               {description}
             </Typography>
           </CardContent>

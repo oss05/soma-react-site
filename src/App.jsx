@@ -21,17 +21,19 @@ import IOT from './Pages/IOT';
 function App() {
 
   const theme = createMuiTheme({
-    primary: {
-      main: 'red',
-      secondary: 'blue'
-    },
-    secondary: {
-      main: 'green',
-      secondary: 'yellow'
-    },
-    text: {
-      main: 'gray',
-      secondary: 'black'
+    palette: {
+      primary: {
+        main: '#F00',
+        secondary: '#0F0'
+      },
+      secondary: {
+        main: '#00F',
+        secondary: '#00FFA4'
+      },
+      text: {
+        main: '#000',
+        secondary: '#FFF'
+      }
     }
   });
 
