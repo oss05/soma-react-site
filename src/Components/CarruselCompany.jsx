@@ -9,12 +9,22 @@ const CarruselCompany = ({imgs}) => {
   const useStyles = makeStyles( (theme) => ({
     root: {
       boxShadow: '-8px 8px 20px rgba(0, 0, 0, 0.1)',
+      backgroundColor: 'white',
+      borderTopLeftRadius: '15px',
+      borderBottomLeftRadius: '15px'
     },
     imgContainer: {
       padding: '10px 10px',
+      display: 'flex',
+      justifyContent:'center',
+      alignItems: 'center',
       '& img': {
         width: '100%',
-        height: '100%'
+        height: '100%',
+        cursor: 'pointer'
+      },
+      '& img:hover': {
+        transform: 'scale(1.1)'
       }
     }
   }) )
@@ -25,19 +35,19 @@ const CarruselCompany = ({imgs}) => {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
-      items: 5
+      items: 8
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3
+      items: 6
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2
+      items: 4
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1
+      items: 2
     }
   };
   return (

@@ -3,6 +3,7 @@ import { Container, Grid } from '@material-ui/core';
 import InfoHoverCard from '../Components/InfoHoverCard';
 import SistemsQuadInfo from '../Components/SistemsQuadInfo';
 import TitleWhitDecorate from '../Components/TitleWhitDecorate';
+import AreaDescription from '../Components/AreaDescription';
 import Prueba from '../Components/Prueba';
 import CarruselCompany from '../Components/CarruselCompany';
 import informaticaForenceImg from '../Assets/imgs/informaticaForenceCard.png';
@@ -36,7 +37,7 @@ export default function Hardware() {
           {/* <Grid xs='6'>
             <CarruselCompany />
           </Grid> */}
-          <Grid xs='6'>
+          {/* <Grid xs='6'>
             <CarruselCompany
             imgs={[ {
                 id: '1',
@@ -61,10 +62,69 @@ export default function Hardware() {
               {
                 id: '6',
                 cover: informaticaForenceImg
+              },
+              {
+                id: '7',
+                cover: informaticaForenceImg
+              },
+              {
+                id: '8',
+                cover: informaticaForenceImg
               }
             ]
            }
             />
+          </Grid> */}
+          <Grid xs='12'>
+            <AreaDescription 
+            img={informaticaForenceImg}
+            >
+              <TitleWhitDecorate 
+              title='Hola mundo'
+              />
+              <p style={{marginRight: 40 + 'px'}} > Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum itaque, dolor aperiam blanditiis atque accusamus labore tempora at quia unde temporibus inventore, laborum esse magni sed laudantium neque deleniti sint
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nemo, obcaecati laudantium praesentium tempora quae possimus nulla explicabo dicta voluptatum, vel minima nihil sed nobis autem. Sit, ut dolor? Debitis!
+              </p>
+              <Grid item xs={12}>
+                <CarruselCompany
+                  imgs={[ {
+                      id: '1',
+                      cover: informaticaForenceImg
+                    },
+                    {
+                      id: '2',
+                      cover: informaticaForenceImg
+                    },
+                    {
+                      id: '3',
+                      cover: informaticaForenceImg
+                    },
+                    {
+                      id: '4',
+                      cover: informaticaForenceImg
+                    },
+                    {
+                      id: '5',
+                      cover: informaticaForenceImg
+                    },
+                    {
+                      id: '6',
+                      cover: informaticaForenceImg
+                    },
+                    {
+                      id: '7',
+                      cover: informaticaForenceImg
+                    },
+                    {
+                      id: '8',
+                      cover: informaticaForenceImg
+                    }
+                  ]
+                  }
+                />
+              </Grid>
+
+            </AreaDescription>
           </Grid>
         </Container>
     )

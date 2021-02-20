@@ -6,12 +6,12 @@ import Typography from '@material-ui/core/Typography';
 const TitleWhitDecorate = ({title}) => {
   const useStyles = makeStyles( (theme) => ({
     root: {
-      width: 'auto',
+      width: 'auto'
     },
     title: {
       width: 'auto',
       fontWeight: 'bold',
-      borderBottom: `10px solid ${theme.palette.primary.main}`
+      borderBottom: `8px solid ${theme.palette.primary.main}`
     },
   }) )
 
@@ -19,7 +19,7 @@ const TitleWhitDecorate = ({title}) => {
 
   return (
     <Box className={classes.root}>
-      <Typography className={classes.title} component='span' variant='h2' >
+      <Typography className={classes.title} component='span' variant='h3' >
         {title}
       </Typography>
     </Box>

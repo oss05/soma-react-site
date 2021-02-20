@@ -34,7 +34,8 @@ function App() {
         main: '#000',
         secondary: '#FFF'
       }
-    }
+    },
+    spacing: 4,
   });
 
   return (
