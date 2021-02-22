@@ -21,7 +21,8 @@ const CarruselCompany = ({imgs}) => {
       '& img': {
         width: '100%',
         height: '100%',
-        cursor: 'pointer'
+        cursor: 'pointer',
+        transition: 'all 650ms ease'
       },
       '& img:hover': {
         transform: 'scale(1.1)'

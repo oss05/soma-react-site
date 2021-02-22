@@ -4,12 +4,16 @@ import InfoHoverCard from '../Components/InfoHoverCard';
 import SistemsQuadInfo from '../Components/SistemsQuadInfo';
 import TitleWhitDecorate from '../Components/TitleWhitDecorate';
 import AreaDescription from '../Components/AreaDescription';
+import InfoVerticalDecorate from '../Components/InfoVerticalDecorate';
+import TitleEnterpriseCarrusel from '../Components/TitleEnterpriseCarrusel';
+import ImgDescription from '../Components/ImgDescription';
+import PageTitle from '../Components/PageTitle';
 import Prueba from '../Components/Prueba';
 import CarruselCompany from '../Components/CarruselCompany';
 import informaticaForenceImg from '../Assets/imgs/informaticaForenceCard.png';
 import informaticaForenceImgLogo from '../Assets/imgs/informaticaForenceCardLogo.png';
 import cableadoEstructurado from '../Assets/imgs/cableadoEstructurado.png';
-
+import CarruselPage from '../Components/CarruselPage';
 
 export default function Hardware() {
     return (
@@ -75,7 +79,7 @@ export default function Hardware() {
            }
             />
           </Grid> */}
-          <Grid xs='12'>
+          {/* <Grid xs='12'>
             <AreaDescription 
             img={informaticaForenceImg}
             >
@@ -125,6 +129,96 @@ export default function Hardware() {
               </Grid>
 
             </AreaDescription>
+          </Grid> */}
+          {/* <Grid xs={6} >
+            <CarruselPage 
+              imgs={[ {
+                  id: '1',
+                  cover: informaticaForenceImg
+                },
+                {
+                  id: '2',
+                  cover: informaticaForenceImg
+                },
+                {
+                  id: '3',
+                  cover: informaticaForenceImg
+                },
+                {
+                  id: '4',
+                  cover: informaticaForenceImg
+                },
+                {
+                  id: '5',
+                  cover: informaticaForenceImg
+                },
+                {
+                  id: '6',
+                  cover: informaticaForenceImg
+                },
+                {
+                  id: '7',
+                  cover: informaticaForenceImg
+                },
+                {
+                  id: '8',
+                  cover: informaticaForenceImg
+                }
+              ]
+              }
+            />
+          </Grid> */}
+          {/* <Grid xs={4}>
+            <InfoVerticalDecorate 
+            title='El principal compromiso es ofrecer consultoria tecnológica profesional'
+            details='Nuestro equipo se encuentra capacitado para dar soporte técnico a usuarios de manera remota o presencial, en las distintas plataformas en equipos de cómputo (Microsoft Windows, MacOS, GNU / Linux) así como también a dispositivos móviles (Android, iOS)'
+            />
+          </Grid> */}
+          {/* <Grid xs={12} >
+            <TitleEnterpriseCarrusel 
+            title='Tecnologia'
+            imgs={[ {
+              id: '1',
+              cover: informaticaForenceImg
+            },
+            {
+              id: '2',
+              cover: informaticaForenceImg
+            },
+            {
+              id: '3',
+              cover: informaticaForenceImg
+            },
+            {
+              id: '4',
+              cover: informaticaForenceImg
+            },
+            {
+              id: '5',
+              cover: informaticaForenceImg
+            },
+            {
+              id: '6',
+              cover: informaticaForenceImg
+            },
+            {
+              id: '7',
+              cover: informaticaForenceImg
+            },
+            {
+              id: '8',
+              cover: informaticaForenceImg
+            }
+          ]
+          }
+            />
+          </Grid> */}
+          <Grid xs={12} >
+            <ImgDescription
+            title='Hola mundo'
+            description='hola dfefsf  sfs ds  asfgasdgsdgsdg sdgsdgsdg sdgsdgsdgsd sdgsdgsdgsd  sdgsdg sdgsdg'
+            img={informaticaForenceImg}
+            />
           </Grid>
         </Container>
     )
