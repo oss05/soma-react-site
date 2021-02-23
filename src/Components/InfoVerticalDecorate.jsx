@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import { Grid, Typography } from '@material-ui/core'
 
 
-const InfoVerticalDecorate = ({title, details}) => {
+const InfoVerticalDecorate = ({title, details, subTitle}) => {
   const useStyles = makeStyles( (theme) => ({
     titleContainer: {
       borderLeft: `5px solid ${theme.palette.primary.main}`,
@@ -20,6 +20,11 @@ const InfoVerticalDecorate = ({title, details}) => {
       <Grid className={classes.titleContainer} item xs={12} >
         <Typography variant="h6" component="h1" >
           {title}
+        </Typography>
+      </Grid>
+      <Grid item xs={12} >
+        <Typography component="h1" variant="p" >
+          {subTitle}
         </Typography>
       </Grid>
       <Grid item xs={12} >
