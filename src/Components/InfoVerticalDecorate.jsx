@@ -6,7 +6,7 @@ import { Grid, Typography } from '@material-ui/core'
 const InfoVerticalDecorate = ({title, details}) => {
   const useStyles = makeStyles( (theme) => ({
     titleContainer: {
-      borderLeft: `10px solid ${theme.palette.primary.main}`,
+      borderLeft: `5px solid ${theme.palette.primary.main}`,
       paddingLeft: '10px',
       marginBottom: '20px',
       marginTop: '20px'
@@ -18,7 +18,7 @@ const InfoVerticalDecorate = ({title, details}) => {
   return (
     <Grid container>
       <Grid className={classes.titleContainer} item xs={12} >
-        <Typography variant="h4" component="h1" >
+        <Typography variant="h6" component="h1" >
           {title}
         </Typography>
       </Grid>
