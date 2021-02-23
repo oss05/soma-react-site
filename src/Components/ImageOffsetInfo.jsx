@@ -2,45 +2,42 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Grid, Typography } from '@material-ui/core'
 import TitleWhitDecorate from './TitleWhitDecorate';
-import Button1 from './Button1';
 
-const ImgDescription = ({title,img,description}) => {
+
+const ImageOffsetInfo = ({title,img,description}) => {
 
   const useStyles = makeStyles( (theme) => ({
     root: {
-      boxShadow: '3px 4px 20px rgba(0, 0, 0, 0.25)',
-      background: '#F8F8F8',
-      borderRadius: '20px',
-      overflow: 'hidden'
+      boxShadow: '14px 12px 35px rgba(0, 0, 0, 0.2)',
+      position: 'relative',
+      padding: '20px',
+      borderRadius: '30px',
+      marginTop: '100px',
+      paddingBottom: '50px',
+      borderBottom: `10px solid ${theme.palette.primary.main}`
     },
     imgContainer: {
-      overflow: 'hidden',
+      
       width: '100%',
-      [theme.breakpoints.up('md')]: {
-        borderBottomRightRadius: '25px',
-        borderTopRightRadius: '25px',
-      },
-      [theme.breakpoints.down('md')]: {
-        borderTopLeftRadius: '25px',
-        borderTopRightRadius: '25px',
-      },
       '& img': {
+        position: 'relative',
+        top: '-30%',
+        borderRadius: '20px',
         width: '100%',
-        height: '100%',
+        height: '125%',
         cursor: 'pointer',
       },
     },
     detailsContainer: {
       [theme.breakpoints.up('md')]: {
-        padding: '100px 50px',
-        borderRight: `10px solid ${theme.palette.primary.main}`,
+        padding: '80px 50px',
       },
       [theme.breakpoints.down('md')]: {
-        padding: '30px 30px',
+        padding: '15px',
       }
     },
     info: {
-      marginTop: '40px',
+      marginTop: '20px',
       [theme.breakpoints.down('md')]: {
         fontSize: '15px'
       }
@@ -52,16 +49,15 @@ const ImgDescription = ({title,img,description}) => {
 
   return (
     <Grid container className={classes.root} >
-      <Grid className={classes.imgContainer} item md={6} xs={12} >
+      <Grid className={classes.imgContainer} item xs={12} >
         <img src={img} />
       </Grid>
-      <Grid item md={6} xs={12} className={classes.detailsContainer}>
+      <Grid item xs={12} className={classes.detailsContainer}>
         <TitleWhitDecorate title={title} />
         <Typography className={classes.info} variant="h6" > {description} </Typography>
-        <Button1/>
       </Grid>
     </Grid>
   )
 }
 
-export default ImgDescription;
+export default ImageOffsetInfo;

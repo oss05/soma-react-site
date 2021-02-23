@@ -5,7 +5,10 @@ import SistemsQuadInfo from '../Components/SistemsQuadInfo';
 import TitleWhitDecorate from '../Components/TitleWhitDecorate';
 import AreaDescription from '../Components/AreaDescription';
 import InfoVerticalDecorate from '../Components/InfoVerticalDecorate';
+import ImageInfo from '../Components/ImageInfo';
+import InfoImage from '../Components/InfoImage';
 import TitleEnterpriseCarrusel from '../Components/TitleEnterpriseCarrusel';
+import ImageOffsetInfo from '../Components/ImageOffsetInfo';
 import ImgDescription from '../Components/ImgDescription';
 import PageTitle from '../Components/PageTitle';
 import Prueba from '../Components/Prueba';
@@ -213,8 +216,22 @@ export default function Hardware() {
           }
             />
           </Grid> */}
-          <Grid xs={12} >
+          {/* <Grid xs={12} >
             <ImgDescription
+            title='Hola mundo'
+            description='hola dfefsf  sfs ds  asfgasdgsdgsdg sdgsdgsdg sdgsdgsdgsd sdgsdgsdgsd  sdgsdg sdgsdg'
+            img={informaticaForenceImg}
+            /> 
+          </Grid>*/}
+          {/* <Grid xs={12} >
+            <InfoImage
+            title='Hola mundo'
+            description='hola dfefsf  sfs ds  asfgasdgsdgsdg sdgsdgsdg sdgsdgsdgsd sdgsdgsdgsd  sdgsdg sdgsdg'
+            img={informaticaForenceImg}
+            />
+          </Grid> */}
+          <Grid xs={5} >
+            <ImageOffsetInfo
             title='Hola mundo'
             description='hola dfefsf  sfs ds  asfgasdgsdgsdg sdgsdgsdg sdgsdgsdgsd sdgsdgsdgsd  sdgsdg sdgsdg'
             img={informaticaForenceImg}
