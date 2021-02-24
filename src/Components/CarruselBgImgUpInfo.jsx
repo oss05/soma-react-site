@@ -40,7 +40,10 @@ const CarruselBgImgUpInfo = ({data}) => {
       <Carousel responsive={responsive}>
         {data.map( data => (
           <div key={data.id}>
-            <BgImgUpInfo title={data.title} description={data.description} logo={data.logo}  />
+            <BgImgUpInfo 
+            title={data.title} 
+            description={data.description} 
+            logo={data.logo}  />
           </div>
         ) )}
       </Carousel>

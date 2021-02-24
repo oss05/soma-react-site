@@ -7,6 +7,8 @@ import BgImgUpInfo from '../Components/BgImgUpInfo';
 import SistemsQuadInfo from '../Components/SistemsQuadInfo';
 import TitleWhitDecorate from '../Components/TitleWhitDecorate';
 import AreaDescription from '../Components/AreaDescription';
+import CounterInfo from '../Components/CounterInfo';
+import Footer from '../Components/Footer';
 import InfoVerticalDecorate from '../Components/InfoVerticalDecorate';
 import ImageInfo from '../Components/ImageInfo';
 import InfoImage from '../Components/InfoImage';
@@ -25,70 +27,7 @@ import CarruselPage from '../Components/CarruselPage';
 
 export default function Hardware() {
     return (
-        <Container maxWidth="xl">
-          <Grid xs={12} >
-            <CarruselBgImgUpInfo
-              data={
-                [
-                  {
-                    id: '1',
-                    title: 'Instalacion sin obras',
-                    description: 'Le proporcionaremos un panel de administración de contenido intuitivo en su sitio web. Implementamos soluciones que automatizan tu trabajo. Le proporcionaremos un panel de administración de contenido intuitivo en su sitio web. Implementamos soluciones que automatizan tu trabajo.',
-                    logo: `${informaticaForenceImg}`
-                  },
-                  {
-                    id: '2',
-                    title: 'Instalacion sin obras',
-                    description: 'Le proporcionaremos un panel de administración de contenido intuitivo en su sitio web. Implementamos soluciones que automatizan tu trabajo.',
-                    logo: `${informaticaForenceImg}`
-                  },
-                  {
-                    id: '3',
-                    title: 'Instalacion sin obras',
-                    description: 'Le proporcionaremos un panel de administración de contenido intuitivo en su sitio web. Implementamos soluciones que automatizan tu trabajo.',
-                    logo: `${informaticaForenceImg}`
-                  },
-                  {
-                    id: '4',
-                    title: 'Instalacion sin obras',
-                    description: 'Le proporcionaremos un panel de administración de contenido intuitivo en su sitio web. Implementamos soluciones que automatizan tu trabajo.',
-                    logo: `${informaticaForenceImg}`
-                  },
-                  {
-                    id: '5',
-                    title: 'Instalacion sin obras',
-                    description: 'Le proporcionaremos un panel de administración de contenido intuitivo en su sitio web. Implementamos soluciones que automatizan tu trabajo.',
-                    logo: `${informaticaForenceImg}`
-                  },
-                  {
-                    id: '6',
-                    title: 'Instalacion sin obras',
-                    description: 'Le proporcionaremos un panel de administración de contenido intuitivo en su sitio web. Implementamos soluciones que automatizan tu trabajo.',
-                    logo: `${informaticaForenceImg}`
-                  },
-                  {
-                    id: '7',
-                    title: 'Instalacion sin obras',
-                    description: 'Le proporcionaremos un panel de administración de contenido intuitivo en su sitio web. Implementamos soluciones que automatizan tu trabajo.',
-                    logo: `${informaticaForenceImg}`
-                  },
-                  {
-                    id: '8',
-                    title: 'Instalacion sin obras',
-                    description: 'Le proporcionaremos un panel de administración de contenido intuitivo en su sitio web. Implementamos soluciones que automatizan tu trabajo.',
-                    logo: `${informaticaForenceImg}`
-                  },
-                  {
-                    id: '9',
-                    title: 'Instalacion sin obras',
-                    description: 'Le proporcionaremos un panel de administración de contenido intuitivo en su sitio web. Implementamos soluciones que automatizan tu trabajo.',
-                    logo: `${informaticaForenceImg}`
-                  },
-                ]
-              } 
-
-            />
-          </Grid>
-        </Container>
+      <Container maxWidth="xl">
+      </Container>
     )
 }
