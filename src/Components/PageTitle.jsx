@@ -2,9 +2,9 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Grid, Typography } from '@material-ui/core';
 
-const PageTitle = ({title, img}) => {
+const PageTitle = ({ title, img }) => {
 
-  const useStyles = makeStyles( (theme) => ({
+  const useStyles = makeStyles((theme) => ({
     root: {
       border: '1px solid red'
     },
@@ -14,13 +14,14 @@ const PageTitle = ({title, img}) => {
       '& img': {
         width: '100%',
         height: '100%',
-        objectFit: 'cover'
+        objectFit: 'contain'
       }
     },
     title: {
-      marginLeft: '20px'
+      marginLeft: '20px',
+      fontWeight: 'bold'
     }
-    
+
   }));
 
   const classes = useStyles();
@@ -32,7 +33,7 @@ const PageTitle = ({title, img}) => {
           <img src={img} />
         </Grid>
         <Grid item xs={10} >
-          <Typography className={classes.title} component="h1" variant="h2">
+          <Typography className={classes.title} component="span" variant="h2">
             {title}
           </Typography>
         </Grid>

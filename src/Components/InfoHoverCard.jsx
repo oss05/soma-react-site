@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import Box from '@material-ui/core/Box';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -6,29 +6,29 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-const InfoHoverCard = ( {img,title,description,logo} ) => {
+const InfoHoverCard = ({ img, title, description, logo }) => {
 
-  const [ hovercard, setHovercard ] = useState(false);
-  const [ dinamicstyles, setDinamicstyles ] = useState({
+  const [hovercard, setHovercard] = useState(false);
+  const [dinamicstyles, setDinamicstyles] = useState({
     filter: 'grayscale(100%)',
     height: '300px',
     opacity: '1',
   })
 
   const handleHoverActive = () => {
-    if(!hovercard){
+    if (!hovercard) {
       setHovercard(true)
       setDinamicstyles({
-        ... dinamicstyles,
+        ...dinamicstyles,
         filter: 'grayscale(0%)',
         height: '350px',
         opacity: '0.6',
       })
 
-    }else{
+    } else {
       setHovercard(false)
       setDinamicstyles({
-        ... dinamicstyles,
+        ...dinamicstyles,
         filter: 'grayscale(100%)',
         height: '300px',
         opacity: '1',
@@ -36,7 +36,7 @@ const InfoHoverCard = ( {img,title,description,logo} ) => {
     }
   }
 
-  const useStyles = makeStyles( (theme) => ({
+  const useStyles = makeStyles((theme) => ({
     card: {
       borderTop: '20px solid #00A8BA',
       borderRadius: '20px',
@@ -44,7 +44,8 @@ const InfoHoverCard = ( {img,title,description,logo} ) => {
       boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
       postion: 'relative',
       transition: 'all 300ms ease',
-      backgroundColor: 'black'
+      backgroundColor: 'black',
+      margin: '12px 0'
     },
     title: {
       fontWeight: 'bold'
@@ -53,7 +54,7 @@ const InfoHoverCard = ( {img,title,description,logo} ) => {
       height: `${dinamicstyles.height}`,
       filter: `${dinamicstyles.filter}`,
       opacity: `${dinamicstyles.opacity}`,
-      
+
     },
     detailsContainer: {
       backgroundColor: 'transparent',
@@ -87,7 +88,7 @@ const InfoHoverCard = ( {img,title,description,logo} ) => {
       animationTimingFunction: 'ease',
     },
     '@keyframes entradaSuave': {
-      from: { 
+      from: {
         opacity: '0',
       },
       to: {
@@ -98,21 +99,21 @@ const InfoHoverCard = ( {img,title,description,logo} ) => {
 
   const classes = useStyles();
 
-  return(
-    
-    <Card 
-    className={classes.card} 
-    onMouseEnter={() => (handleHoverActive())} 
-    onMouseLeave={() => (handleHoverActive())}
+  return (
+
+    <Card
+      className={classes.card}
+      onMouseEnter={() => (handleHoverActive())}
+      onMouseLeave={() => (handleHoverActive())}
     >
-      { !hovercard ? 
+      { !hovercard ?
         <CardActionArea >
           <CardMedia
             className={classes.media}
             image={img}
           />
           <CardContent className={classes.bg}>
-            <Typography variant="h5" component="h2" align="center">
+            <Typography variant="h5" component="h2" align="center" className={classes.title}>
               {title}
             </Typography>
           </CardContent>
@@ -124,12 +125,12 @@ const InfoHoverCard = ( {img,title,description,logo} ) => {
             image={img}
           />
           <CardContent
-          align="center"
-          className={classes.detailsContainer}>
+            align="center"
+            className={classes.detailsContainer}>
             <Box
-            className={`${classes.logoContainer} ${classes.animationSweet}`} 
+              className={`${classes.logoContainer} ${classes.animationSweet}`}
             >
-              <img src={logo} alt="logo servicio"/>
+              <img src={logo} alt="logo servicio" />
             </Box>
             <Typography className={`${classes.title} ${classes.animationSweet}`} variant="h5" component="h2" align="center">
               {title}
@@ -139,7 +140,7 @@ const InfoHoverCard = ( {img,title,description,logo} ) => {
             </Typography>
           </CardContent>
         </CardActionArea>
-        
+
       }
     </Card>
   )

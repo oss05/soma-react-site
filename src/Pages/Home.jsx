@@ -54,7 +54,7 @@ export default function Home() {
                     <Container maxWidth="md" className={classes.container}>
                         <Grid item className={classes.triangle}></Grid>
                         <Grid item>
-                            <Typography component="h1" variant="h3" align="center" className={classes.title}> Somos una de las empresas de más efectivas</Typography>
+                            <Typography component="h1" variant="h3" align="center" className={classes.title}>Somos una de las empresas de más efectivas</Typography>
                         </Grid>
                     </Container>
                 </Grid>

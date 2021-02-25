@@ -23,7 +23,7 @@ function App() {
   const theme = createMuiTheme({
     palette: {
       primary: {
-        main: '#F00',
+        main: '#00A8BA',
         secondary: '#0F0'
       },
       secondary: {
@@ -32,7 +32,7 @@ function App() {
       },
       text: {
         main: '#000',
-        secondary: '#FFF'
+        gray: '#707070'
       }
     },
     spacing: 4,
