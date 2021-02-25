@@ -1,29 +1,29 @@
 import React, { useRef, useEffect, useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
-import { Box, Typography, Grid } from '@material-ui/core';
+import { Typography, Grid } from '@material-ui/core';
 
 const CounterInfo = () => {
 
   const data = {
     n1: {
-      title: 'Nos enfocamos en tus clientes',
-      details: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, soluta culpa eaque illum dolor minus repellat reprehenderit facilis maxime ullam facere praesentium? Velit fugit culpa quisquam non doloribus fuga explicabo.'
+      title: 'Analizamos tus ideas y objetivos comerciales',
+      details: 'Antes de comenzar a trabajar en el diseño de un sitio web, hablamos mucho: queremos comprender su negocio y los objetivos que se proponga, queremos conocer a sus clientes.'
     },
     n2: {
-      title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-      details: 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lobortis scelerisque fermentum dui faucibus in ornare quam viverra orci. Praesent elementum facilisis leo vel. Nulla aliquet porttitor lacus luctus accumsan tortor.'
+      title: 'Nos enfocamos en tus clientes',
+      details: 'Llamaremos su atención y les animamos a que se pongan en contacto con usted , ajustando el sitio web a su conveniencia, necesidades y expectativas. Te sugerimos soluciones óptimas para sacar el máximo partidop a tu proyecto'
     },
     n3: {
-      title: 'Risus pretium quam vulputate dignissim suspendisse in est ante. ',
-      details: 'Aliquam malesuada bibendum arcu vitae elementum curabitur vitae. Quam quisque id diam vel quam elementum. Tincidunt praesent semper feugiat nibh sed pulvinar proin gravida.'
+      title: 'Brindaremos todo el apoyo necesario',
+      details: 'Llamaremos su atención y les animamos a que se pongan en contacto con usted , ajustando el sitio web a su conveniencia, necesidades y expectativas. Te sugerimos soluciones óptimas para sacar el máximo partidop a tu proyecto'
     },
     n4: {
-      title: 'Viverra nibh cras pulvinar mattis nunc sed blandit libero volutpat. ',
-      details: 'Placerat duis ultricies lacus sed turpis tincidunt. Non enim praesent elementum facilisis leo vel fringilla est. Faucibus ornare suspendisse sed nisi lacus sed. Eget lorem dolor sed viverra ipsum nunc aliquet. Metus dictum at tempor commodo ullamcorper a lacus.'
+      title: 'Nos mantendremos por delate de su competencia',
+      details: 'Comprobaremos a quién te enfrentas cada día y te propondremos soluciones que te harán destacar de la competencia.'
     },
     n5: {
-      title: 'Contrary to popular belief, Lorem Ipsum is not ',
-      details: 'Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.'
+      title: 'Simplificamos tu vida',
+      details: 'Le proporconaremos un panel de administración de contenido intuitivo en su sitio web. Implementaremos soluciones que automatizarán tu trabajo. Si necesita soluciones dedicadas, nuestros programadores se las proporcionarán en la forma óptima para usted.'
     },
   }
   const [ datat, setDatat ] = useState({
@@ -84,8 +84,7 @@ const CounterInfo = () => {
   
   const useStyles = makeStyles( (theme) => ({
     root:{
-      padding: '10px 0px'
-
+      padding: '10px 0px',
     },
     numbersContainer: {
       [theme.breakpoints.down('md')]: {
@@ -99,14 +98,29 @@ const CounterInfo = () => {
       borderTopLeftRadius: '15px',
       color: 'white',
       cursor: 'pointer',
-      
+      marginBottom: '5px'
     },
     descriptionContainer: {
-      margin: '25px 0px',
+      margin: '20px 0px',
+      color: '#848484',
+      '& h2': {
+        [theme.breakpoints.down('sm')]: {
+          fontSize: '16px'
+        }
+      }
+    },
+    descriptionNumber: {
+      color: 'white',
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '16px'
+      }
+      
     },
     infoNumber: {
       padding: '25px',
-      visibility: 'hidden'
+      visibility: 'hidden',
+      minHeight: '370px'
+
     },
     infoNumberDecorate: {
       margin: '20px 0px',
@@ -115,7 +129,16 @@ const CounterInfo = () => {
       backgroundColor: 'white',
     },
     title: {
-      color: 'white'
+      margin: '20px 0px',
+      color: 'white',
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '20px'
+      }
+    },
+    titleMaster: {
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '20px'
+      }
     }
   }) )
 
@@ -136,12 +159,12 @@ const CounterInfo = () => {
   return(
     <Grid container xs={12} className={classes.root} >
       <Grid item xs={12} >
-        <Typography component='h2' variant='h4' >¿Estás pensando en un nuevo sitio web?</Typography>
+        <Typography component='h2' variant='h4' className={classes.titleMaster} >¿Estás pensando en un nuevo sitio web?</Typography>
       </Grid>
       <Grid item xs={12} className={classes.descriptionContainer} >
-        <Typography component='h2' variant='h6' > Conoce 5 razones por las que debes apostar con nosotros </Typography>
+        <Typography component='h2' variant='h6' > Conoce 5 razones por las que debes apostar con nosotros: </Typography>
       </Grid>
-      <Grid item container md={12} xs={2} justify='space-between' className={classes.numbersContainer} >
+      <Grid item container lg={12} xs={2} justify='space-between' className={classes.numbersContainer} >
         <Grid item container justify='center' alignItems='center' className={classes.numberContainer} onMouseLeave={ () => (handleDesactive()) } onMouseOver={() =>(handleInfo('1'))} ref={number1} >
           <Typography component='h1' variant='h4' > 1 </Typography>
         </Grid>
@@ -158,13 +181,11 @@ const CounterInfo = () => {
           <Typography component='h1' variant='h4' > 5 </Typography>
         </Grid>
       </Grid>
-      <Grid item container md={12} xs={10} className={classes.infoNumber} ref={infoContainer} >
+      <Grid item container lg={12} xs={10} className={classes.infoNumber} ref={infoContainer} >
         <Grid item md={12} >
           <div className={classes.infoNumberDecorate} ></div>
           <Typography className={classes.title} component='h2' variant='h4' > {datat.title} </Typography>
-        </Grid>
-        <Grid item md={12} className={classes.descriptionContainer} >
-          <Typography component='h2' variant='h6' > {datat.description} </Typography>
+          <Typography component='h2' variant='h6' className={classes.descriptionNumber} > {datat.description} </Typography>
         </Grid>
       </Grid>
     </Grid>

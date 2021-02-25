@@ -10,7 +10,7 @@ const CarruselBgImgUpInfo = ({data}) => {
   const useStyles = makeStyles( (theme) => ({
     root: {
       backgroundColor: 'transparent',
-      
+      margin: '20px 0px'
     },
   }) )
 
