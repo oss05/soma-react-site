@@ -11,7 +11,10 @@ const TitleWhitDecorate = ({title}) => {
     title: {
       width: 'auto',
       fontWeight: 'bold',
-      borderBottom: `8px solid ${theme.palette.primary.main}`
+      borderBottom: `8px solid ${theme.palette.primary.main}`,
+      [theme.breakpoints.down('md')]: {
+        fontSize: '35px'
+      }
     },
   }) )
 

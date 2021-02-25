@@ -44,7 +44,8 @@ const InfoHoverCard = ( {img,title,description,logo} ) => {
       boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
       postion: 'relative',
       transition: 'all 300ms ease',
-      backgroundColor: 'black'
+      backgroundColor: 'black',
+      
     },
     title: {
       fontWeight: 'bold'

@@ -8,6 +8,8 @@ import Typography from '@material-ui/core/Typography';
 const SistemsQuadInfo = ({img, title, description}) => {
   const useStyles = makeStyles((theme) => ({
     root: {
+      padding: '10px',
+      backgroundColor: '#E5E5E5',
       display: 'flex',
       width: '100%',
       boxShadow: 'none',
@@ -41,6 +43,7 @@ const SistemsQuadInfo = ({img, title, description}) => {
       },
     },
     subtitle: {
+      color: '#707070',
       fontSize: '15px',
       [theme.breakpoints.down('md')]: {
         textAlign: 'center',

@@ -28,68 +28,12 @@ import CarruselPage from '../Components/CarruselPage';
 export default function Hardware() {
     return (
       <Container maxWidth="xl" >
-        <Grid  xs={12} >
-          <CarruselBgImgUpInfo
-          data={
-            [
-              {
-                id: '1',
-                title: 'Instalacion sin obras',
-                description: 'Le proporcionaremos un panel de administración de contenido intuitivo en su sitio web. Implementamos soluciones que automatizan tu trabajo. Le proporcionaremos un panel de administración de contenido intuitivo en su sitio web. Implementamos soluciones que automatizan tu trabajo.',
-                logo: `${informaticaForenceImg}`
-              },
-              {
-                id: '2',
-                title: 'Instalacion sin obras',
-                description: 'Le proporcionaremos un panel de administración de contenido intuitivo en su sitio web. Implementamos soluciones que automatizan tu trabajo.',
-                logo: `${informaticaForenceImg}`
-              },
-              {
-                id: '3',
-                title: 'Instalacion sin obras',
-                description: 'Le proporcionaremos un panel de administración de contenido intuitivo en su sitio web. Implementamos soluciones que automatizan tu trabajo.',
-                logo: `${informaticaForenceImg}`
-              },
-              {
-                id: '4',
-                title: 'Instalacion sin obras',
-                description: 'Le proporcionaremos un panel de administración de contenido intuitivo en su sitio web. Implementamos soluciones que automatizan tu trabajo.',
-                logo: `${informaticaForenceImg}`
-              },
-              {
-                id: '5',
-                title: 'Instalacion sin obras',
-                description: 'Le proporcionaremos un panel de administración de contenido intuitivo en su sitio web. Implementamos soluciones que automatizan tu trabajo.',
-                logo: `${informaticaForenceImg}`
-              },
-              {
-                id: '6',
-                title: 'Instalacion sin obras',
-                description: 'Le proporcionaremos un panel de administración de contenido intuitivo en su sitio web. Implementamos soluciones que automatizan tu trabajo.',
-                logo: `${informaticaForenceImg}`
-              },
-              {
-                id: '7',
-                title: 'Instalacion sin obras',
-                description: 'Le proporcionaremos un panel de administración de contenido intuitivo en su sitio web. Implementamos soluciones que automatizan tu trabajo.',
-                logo: `${informaticaForenceImg}`
-              },
-              {
-                id: '8',
-                title: 'Instalacion sin obras',
-                description: 'Le proporcionaremos un panel de administración de contenido intuitivo en su sitio web. Implementamos soluciones que automatizan tu trabajo.',
-                logo: `${informaticaForenceImg}`
-              },
-              {
-                id: '9',
-                title: 'Instalacion sin obras',
-                description: 'Le proporcionaremos un panel de administración de contenido intuitivo en su sitio web. Implementamos soluciones que automatizan tu trabajo.',
-                logo: `${informaticaForenceImg}`
-              },
-            ]
-          } 
-
-          />
+        <Grid  xs={12} md={12} >
+          <ImageOffsetInfo
+            title='Hola mundo'
+            description='hola dfefsf  sfs ds  asfgasdgsdgsdg sdgsdgsdg sdgsdgsdgsd sdgsdgsdgsd  sdgsdg sdgsdg'
+            img={informaticaForenceImg}
+            />
         </Grid>
       </Container>
     )
