@@ -9,7 +9,7 @@ const InfoVerticalDecorate = ({ title, details }) => {
       padding: 20
     },
     titleContainer: {
-      borderLeft: `10px solid ${theme.palette.primary.main}`,
+      borderLeft: `5px solid ${theme.palette.primary.main}`,
       paddingLeft: '10px',
       marginBottom: '20px',
       marginTop: '20px',
