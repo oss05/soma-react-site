@@ -1,6 +1,9 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import { Card, CardContent, Typography } from '@material-ui/core';
+import flecha from '../Assets/imgs/arrow-r.png';
+
+
 const BgImgUpImg = ({ title, description, logo }) => {
 
 
@@ -14,7 +17,8 @@ const BgImgUpImg = ({ title, description, logo }) => {
       position: 'relative',
       paddingTop: '150px',
       marginRight: '20px',
-      height: '300px'
+      height: '300px',
+      
     },
     title: {
       fontWeight: 'bold',
@@ -22,15 +26,28 @@ const BgImgUpImg = ({ title, description, logo }) => {
     },
 
     detailsContainer: {
+      width: '90%',
       backgroundColor: 'black',
       position: 'absolute',
       bottom: '0',
       color: 'black',
       opacity: '0.9',
       color: 'white',
-      padding: '20px'
+      padding: '0px 5%',
+      cursor: 'pointer',
+      '&:hover': {
+        '& h2:nth-of-type(2)': {
+          display: 'block'
+        }
+      }
     },
-
+    arrow: {
+      margin: '15px 0px'
+    },
+    description: {
+      display: 'none',
+      textAlign: 'center',
+    }
   }));
 
   const classes = useStyles();
@@ -42,6 +59,7 @@ const BgImgUpImg = ({ title, description, logo }) => {
       <CardContent
         align="center"
         className={classes.detailsContainer}>
+        <img className={classes.arrow} src={flecha} />
         <Typography className={`${classes.title}`} variant="h6" component="h2" align="center">
           {title}
         </Typography>
