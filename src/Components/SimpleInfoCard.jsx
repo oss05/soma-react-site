@@ -17,6 +17,7 @@ const SimpleInfoCard = ({title,description,logo}) => {
       backgroundColor: 'white',
       color: 'black',
       padding: '50px',
+      
     },
     logoContainer: {
       width: '90px',
@@ -28,6 +29,12 @@ const SimpleInfoCard = ({title,description,logo}) => {
         objectFit: 'cover'
       }
     },
+    listContainer: {
+      listStyle: 'none',
+      padding: '0px',
+      '& li h2': {
+      }
+    }
   }));
 
   const classes = useStyles();
@@ -47,9 +54,16 @@ const SimpleInfoCard = ({title,description,logo}) => {
         <Typography className={`${classes.title}`} variant="h5" component="h2" align="center">
           {title}
         </Typography>
-        <Typography className={classes.description} component="h2" align="center">
-          {description}
-        </Typography>
+        <ul className={classes.listContainer}>
+          {description.map( item => (
+            <li key={item.id}>
+              <Typography className={classes.description} component="h2" align="center">
+                {item.data}
+              </Typography>
+            </li>
+          ) )}
+        </ul>
+        
       </CardContent>
     </Card>
   )

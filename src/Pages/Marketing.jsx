@@ -38,6 +38,17 @@ import web from '../Assets/imgs/web.png';
 import apps from '../Assets/imgs/apps.png';
 import servicios from '../Assets/imgs/servicios.png'
 
+import carrusel1Img1 from '../Assets/imgs/mc1-1.png'
+import carrusel1Img2 from '../Assets/imgs/mc1-2.png'
+import carrusel1Img3 from '../Assets/imgs/mc1-3.png'
+import carrusel1Img4 from '../Assets/imgs/mc1-4.png'
+import carrusel1Img5 from '../Assets/imgs/mc1-5.png'
+
+import chatbot from '../Assets/imgs/chatbot.png'
+import tendencia from '../Assets/imgs/tendencia.png'
+import www from '../Assets/imgs/www.png'
+
+
 export default function Marketing() {
     const useStyles = makeStyles((theme) => ({
         carouselBorderRadius: {
@@ -99,32 +110,93 @@ export default function Marketing() {
                     <Grid item xs={12} md={4} style={{ borderRight: 'solid 1px #DADADA' }}>
                         <SimpleInfoCard
                             title="WWW:"
-                            description="Posicionamiento
-                            Auditorías SEO
-                            Optimizaciones SEO
-                            Campañas de Google Ads
-                            Redacción
-                            Marketing de contenidos"
-                            logo={informaticaForenceImg}
+                            description={[ 
+                              {
+                                id: '1',
+                                data: 'Posicionamiento'
+                              },
+                              {
+                                id: '2',
+                                data: 'Auditorías SEO'
+                              },
+                              {
+                                id: '3',
+                                data: 'Optimizaciones SEO'
+                              }, 
+                              {
+                                id: '4',
+                                data: 'Campañas de Google Ads'
+                              }, 
+                              {
+                                id: '5',
+                                data: 'Redacción'
+                              }, 
+                              {
+                                id: '6',
+                                data: 'Marketing de contenidos'
+                              },   
+                            ]}
+                            logo={www}
                         />
                     </Grid>
                     <Grid item xs={12} md={4} style={{ borderRight: 'solid 1px #DADADA' }}>
                         <SimpleInfoCard
                             title="SEO y Google Ads:"
-                            description="Sitios web, Tiendas de Internet, Portales, Aplicaciones dedicadas, Auditorías de UX / UI, Optimización de sitios web"
-                            logo={informaticaForenceImg}
+                            description={[ 
+                              {
+                                id: '1',
+                                data: 'Sitios web'
+                              },
+                              {
+                                id: '2',
+                                data: 'Tiendas de Internet'
+                              },
+                              {
+                                id: '3',
+                                data: 'Portales'
+                              }, 
+                              {
+                                id: '4',
+                                data: 'Aplicaciones dedicadas'
+                              }, 
+                              {
+                                id: '5',
+                                data: 'Auditorías de UX / UI'
+                              }, 
+                              {
+                                id: '6',
+                                data: 'Optimización de sitios web'
+                              },   
+                            ]}
+                            logo={tendencia}
                         />
                     </Grid>
                     <Grid item xs={12} md={4}>
                         <SimpleInfoCard
                             title="Redes sociales:"
-                            description="Facebook
-                            Instagram
-                            LinkedIn
-                            Publicidad en redes sociales
-                            Chatbots
-                            "
-                            logo={informaticaForenceImg}
+                            description={[ 
+                              {
+                                id: '1',
+                                data: 'Facebook'
+                              },
+                              {
+                                id: '2',
+                                data: 'Instagram'
+                              },
+                              {
+                                id: '3',
+                                data: 'LinkedIn'
+                              }, 
+                              {
+                                id: '4',
+                                data: 'Publicidad en redes sociales'
+                              }, 
+                              {
+                                id: '5',
+                                data: 'Chatbots'
+                              }, 
+                            ]}
+                            logo={chatbot}
                         />
                     </Grid>
 
@@ -134,39 +206,33 @@ export default function Marketing() {
                     <CarruselBgImgUpInfo
                         data={[{
                             id: '1',
-                            logo: informaticaForenceImg,
-                            title: 'title',
-                            description: 'lorem ipsum'
+                            logo: carrusel1Img1,
+                            title: 'Nos mantendremos por delante de su competencia',
+                            description: 'Comprobaremos a quién te enfrentas cada día y te propondremos soluciones que te harán destacar de la competencia.'
                         },
                         {
                             id: '2',
-                            logo: informaticaForenceImg,
-                            title: 'title',
-                            description: 'lorem ipsum'
+                            logo: carrusel1Img2,
+                            title: 'Simplificamos tu vida',
+                            description: 'Le proporcionaremos un panel de administración de contenido intuitivo en su sitio web. Implementamos soluciones que automatizan tu trabajo. '
                         },
                         {
                             id: '3',
-                            logo: informaticaForenceImg,
-                            title: 'title',
-                            description: 'lorem ipsum'
+                            logo: carrusel1Img3,
+                            title: 'Garantizamos una comunicación eficiente',
+                            description: 'A pesar de los estereotipos relacionados con los "especialistas en TI",garantizamos una comunicación eficiente y comprensible'
                         },
                         {
                             id: '4',
-                            logo: informaticaForenceImg,
-                            title: 'title',
-                            description: 'lorem ipsum'
+                            logo: carrusel1Img4,
+                            title: 'Analizamos tus objetivos comerciales',
+                            description: 'Antes de comenzar a trabajar en el diseño de un sitio web, queremos comprender su negocio y los objetivos que se proponga, necesitamos conocer a sus clientes.'
                         },
                         {
                             id: '5',
-                            logo: informaticaForenceImg,
-                            title: 'title',
-                            description: 'lorem ipsum'
-                        },
-                        {
-                            id: '6',
-                            logo: informaticaForenceImg,
-                            title: 'title',
-                            description: 'lorem ipsum'
+                            logo: carrusel1Img5,
+                            title: 'Nos enfocamos en tus clientes',
+                            description: 'Llamaremos su atención y les animamos a que se pongan en contacto con usted, ajustando el sitio web a su conveniencia, necesidades y expectativas.'
                         },
                         ]
                         }

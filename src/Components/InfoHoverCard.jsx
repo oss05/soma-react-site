@@ -21,7 +21,7 @@ const InfoHoverCard = ({ img, title, description, logo }) => {
       setDinamicstyles({
         ...dinamicstyles,
         filter: 'grayscale(0%)',
-        height: '350px',
+        height: '400px',
         opacity: '0.6',
       })
 
