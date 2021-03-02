@@ -3,10 +3,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 
-const TitleWhitDecorate = ({title}) => {
-  const useStyles = makeStyles( (theme) => ({
+const TitleWhitDecorate = ({ title }) => {
+  const useStyles = makeStyles((theme) => ({
     root: {
-      width: 'auto'
+      width: 'auto',
+      margin: '2em 0'
     },
     title: {
       width: 'auto',
@@ -16,7 +17,7 @@ const TitleWhitDecorate = ({title}) => {
         fontSize: '35px'
       }
     },
-  }) )
+  }))
 
   const classes = useStyles();
 

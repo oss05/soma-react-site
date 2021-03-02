@@ -1,11 +1,11 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Box, Grid, Typography } from '@material-ui/core'
-const AreaDescription = ({img, children}) => {
+const AreaDescription = ({ img, children }) => {
 
-  const useStyles = makeStyles( (theme) => ({
+  const useStyles = makeStyles((theme) => ({
     root: {
-      backgroundColor: '#f8f8f8',
+      // backgroundColor: '#f8f8f8',
       height: '100%'
     },
     containerMaster: {
@@ -13,7 +13,7 @@ const AreaDescription = ({img, children}) => {
     },
     left: {
       display: 'block',
-      padding: '20px 0px 20px 30px',
+      padding: '0 1em',
     },
     right: {
       display: 'block',
@@ -47,18 +47,18 @@ const AreaDescription = ({img, children}) => {
 
   return (
     <Box className={classes.root}>
-      <Grid container 
-      className={classes.containerMaster}
-      xs={12}
+      <Grid container
+        className={classes.containerMaster}
+        xs={12}
       >
         <Grid item xs={12} className={classes.top}>
-          <img src={img} alt=""/>
+          <img src={img} alt="" />
         </Grid>
         <Grid item container md={8} className={classes.left}>
           {children}
         </Grid>
         <Grid item md={4} className={classes.right}>
-          <img src={img} alt=""/>
+          <img src={img} alt="" />
         </Grid>
       </Grid>
     </Box>

@@ -1,10 +1,10 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import { Card, CardContent, Typography } from '@material-ui/core';
-const BgImgUpImg = ({title,description,logo}) => {
-  
+const BgImgUpImg = ({ title, description, logo }) => {
 
-  const useStyles = makeStyles( (theme) => ({
+
+  const useStyles = makeStyles((theme) => ({
     card: {
       boxShadow: 'none',
       borderRadius: '20px',
@@ -35,13 +35,13 @@ const BgImgUpImg = ({title,description,logo}) => {
 
   const classes = useStyles();
 
-  return(
-    
-    <Card 
-    className={classes.card} >
+  return (
+
+    <Card
+      className={classes.card} >
       <CardContent
-      align="center"
-      className={classes.detailsContainer}>
+        align="center"
+        className={classes.detailsContainer}>
         <Typography className={`${classes.title}`} variant="h6" component="h2" align="center">
           {title}
         </Typography>

@@ -18,22 +18,27 @@ const PageTitle = ({ title, img }) => {
       }
     },
     title: {
-      marginLeft: '20px',
+      paddingLeft: '20px',
       fontWeight: 'bold'
-    }
-
+    },
+    areaDisplay: {
+      display: 'none',
+      [theme.breakpoints.up('md')]: {
+        display: 'block'
+      }
+    },
   }));
 
   const classes = useStyles();
 
   return (
-    <Box>
-      <Grid container xs={12} >
+    <Box className={classes.areaDisplay}>
+      <Grid container alignItems="center" xs={12} >
         <Grid className={classes.imgContainer} item xs={2} >
           <img src={img} />
         </Grid>
         <Grid item xs={10} >
-          <Typography className={classes.title} component="span" variant="h2">
+          <Typography className={classes.title} variant="h2">
             {title}
           </Typography>
         </Grid>

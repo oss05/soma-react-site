@@ -26,7 +26,7 @@ const CounterInfo = () => {
       details: 'Le proporconaremos un panel de administración de contenido intuitivo en su sitio web. Implementaremos soluciones que automatizarán tu trabajo. Si necesita soluciones dedicadas, nuestros programadores se las proporcionarán en la forma óptima para usted.'
     },
   }
-  const [ datat, setDatat ] = useState({
+  const [datat, setDatat] = useState({
     title: 'Nos enfocamos en tus clientes',
     description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, soluta culpa eaque illum dolor minus repellat reprehenderit facilis maxime ullam facere praesentium? Velit fugit culpa quisquam non doloribus fuga explicabo.'
   })
@@ -38,52 +38,52 @@ const CounterInfo = () => {
   const number5 = useRef();
 
   const handleInfo = (number) => {
-    infoContainer.current.style.visibility='visible';
-    switch(number){
+    infoContainer.current.style.visibility = 'visible';
+    switch (number) {
       case '1':
         setDatat({
           title: data.n1.title,
           description: data.n1.details,
-        }) 
-        infoContainer.current.style.backgroundColor='#F2AC57'
-      break;
+        })
+        infoContainer.current.style.backgroundColor = '#F2AC57'
+        break;
       case '2':
         setDatat({
           title: data.n2.title,
           description: data.n2.details,
-        }) 
-        infoContainer.current.style.backgroundColor='#FF7171'
-      break;
+        })
+        infoContainer.current.style.backgroundColor = '#FF7171'
+        break;
       case '3':
         setDatat({
           title: data.n3.title,
           description: data.n3.details
         })
-        infoContainer.current.style.backgroundColor='#14A38B' 
-      break;
+        infoContainer.current.style.backgroundColor = '#14A38B'
+        break;
       case '4':
         setDatat({
           title: data.n4.title,
           description: data.n4.details
         })
-        infoContainer.current.style.backgroundColor='#0880AE' 
-      break;
+        infoContainer.current.style.backgroundColor = '#0880AE'
+        break;
       case '5':
         setDatat({
           title: data.n5.title,
           description: data.n5.details
-        }) 
-        infoContainer.current.style.backgroundColor='#2C2738' 
-      break;
+        })
+        infoContainer.current.style.backgroundColor = '#2C2738'
+        break;
     }
   }
 
-  const handleDesactive = () =>{
-    infoContainer.current.style.visibility='hidden';
+  const handleDesactive = () => {
+    infoContainer.current.style.visibility = 'hidden';
   }
-  
-  const useStyles = makeStyles( (theme) => ({
-    root:{
+
+  const useStyles = makeStyles((theme) => ({
+    root: {
       padding: '10px 0px',
     },
     numbersContainer: {
@@ -101,7 +101,7 @@ const CounterInfo = () => {
       marginBottom: '5px'
     },
     descriptionContainer: {
-      margin: '20px 0px',
+      margin: '10px 0px',
       color: '#848484',
       '& h2': {
         [theme.breakpoints.down('sm')]: {
@@ -114,12 +114,12 @@ const CounterInfo = () => {
       [theme.breakpoints.down('sm')]: {
         fontSize: '16px'
       }
-      
+
     },
     infoNumber: {
       padding: '25px',
       visibility: 'hidden',
-      minHeight: '370px'
+      minHeight: '300px'
 
     },
     infoNumberDecorate: {
@@ -139,46 +139,49 @@ const CounterInfo = () => {
       [theme.breakpoints.down('sm')]: {
         fontSize: '20px'
       }
+    },
+    bold: {
+      fontWeight: 'bold'
     }
-  }) )
+  }))
 
   const classes = useStyles();
 
   const handleColor = () => {
-    number1.current.style.backgroundColor='#F2AC57';
-    number2.current.style.backgroundColor='#FF7171';
-    number3.current.style.backgroundColor='#14A38B';
-    number4.current.style.backgroundColor='#0880AE';
-    number5.current.style.backgroundColor='#2C2738';
+    number1.current.style.backgroundColor = '#F2AC57';
+    number2.current.style.backgroundColor = '#FF7171';
+    number3.current.style.backgroundColor = '#14A38B';
+    number4.current.style.backgroundColor = '#0880AE';
+    number5.current.style.backgroundColor = '#2C2738';
   }
 
-  useEffect( () => (
+  useEffect(() => (
     handleColor()
-  ) )
+  ))
 
-  return(
+  return (
     <Grid container xs={12} className={classes.root} >
       <Grid item xs={12} >
-        <Typography component='h2' variant='h4' className={classes.titleMaster} >¿Estás pensando en un nuevo sitio web?</Typography>
+        <Typography component='h2' variant='h5' className={classes.bold} >¿Estás pensando en un nuevo sitio web?</Typography>
       </Grid>
       <Grid item xs={12} className={classes.descriptionContainer} >
-        <Typography component='h2' variant='h6' > Conoce 5 razones por las que debes apostar con nosotros: </Typography>
+        <Typography component='h2' variant='h5' > Conoce 5 razones por las que debes apostar por nosotros: </Typography>
       </Grid>
-      <Grid item container lg={12} xs={2} justify='space-between' className={classes.numbersContainer} >
-        <Grid item container justify='center' alignItems='center' className={classes.numberContainer} onMouseLeave={ () => (handleDesactive()) } onMouseOver={() =>(handleInfo('1'))} ref={number1} >
-          <Typography component='h1' variant='h4' > 1 </Typography>
+      <Grid item container lg={12} xs={2} justify='space-around' className={classes.numbersContainer} >
+        <Grid item container justify='center' alignItems='center' className={classes.numberContainer} onMouseLeave={() => (handleDesactive())} onMouseOver={() => (handleInfo('1'))} ref={number1} >
+          <Typography component='h1' variant='h4' className={classes.bold}> 1 </Typography>
         </Grid>
-        <Grid item container justify='center' alignItems='center' className={classes.numberContainer} onMouseLeave={ () => (handleDesactive()) } onMouseOver={() =>(handleInfo('2'))} ref={number2} >
-          <Typography component='h1' variant='h4' > 2 </Typography>
+        <Grid item container justify='center' alignItems='center' className={classes.numberContainer} onMouseLeave={() => (handleDesactive())} onMouseOver={() => (handleInfo('2'))} ref={number2} >
+          <Typography component='h1' variant='h4' className={classes.bold}> 2 </Typography>
         </Grid>
-        <Grid item container justify='center' alignItems='center' className={classes.numberContainer} onMouseLeave={ () => (handleDesactive()) } onMouseOver={() =>(handleInfo('3'))} ref={number3} >
-          <Typography component='h1' variant='h4' > 3 </Typography>
+        <Grid item container justify='center' alignItems='center' className={classes.numberContainer} onMouseLeave={() => (handleDesactive())} onMouseOver={() => (handleInfo('3'))} ref={number3} >
+          <Typography component='h1' variant='h4' className={classes.bold}> 3 </Typography>
         </Grid>
-        <Grid item container justify='center' alignItems='center' className={classes.numberContainer} onMouseLeave={ () => (handleDesactive()) } onMouseOver={() =>(handleInfo('4'))} ref={number4} >
-          <Typography component='h1' variant='h4' > 4 </Typography>
+        <Grid item container justify='center' alignItems='center' className={classes.numberContainer} onMouseLeave={() => (handleDesactive())} onMouseOver={() => (handleInfo('4'))} ref={number4} >
+          <Typography component='h1' variant='h4' className={classes.bold}> 4 </Typography>
         </Grid>
-        <Grid item container justify='center' alignItems='center' className={classes.numberContainer} onMouseLeave={ () => (handleDesactive()) } onMouseOver={() =>(handleInfo('5'))} ref={number5} >
-          <Typography component='h1' variant='h4' > 5 </Typography>
+        <Grid item container justify='center' alignItems='center' className={classes.numberContainer} onMouseLeave={() => (handleDesactive())} onMouseOver={() => (handleInfo('5'))} ref={number5} >
+          <Typography component='h1' variant='h4' className={classes.bold}> 5 </Typography>
         </Grid>
       </Grid>
       <Grid item container lg={12} xs={10} className={classes.infoNumber} ref={infoContainer} >

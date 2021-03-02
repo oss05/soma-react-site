@@ -51,329 +51,457 @@ import correoLogo from '../Assets/imgs/correo_logo.png';
 import procesosLogo from '../Assets/imgs/procesos_logo.png';
 import aspelLogo from '../Assets/imgs/aspel_logo.png';
 
+import oneCarousel from '../Assets/imgs/molecula/1.png';
+import twoCarousel from '../Assets/imgs/molecula/2.png';
+import threeCarousel from '../Assets/imgs/molecula/3.png';
+import fourCarousel from '../Assets/imgs/molecula/4.png';
+
+import dell from '../Assets/imgs/dell.png';
+import hp from '../Assets/imgs/hp.png';
+import lenovo from '../Assets/imgs/lenovo.png';
+import windows from '../Assets/imgs/windows.png';
+import office from '../Assets/imgs/office.png';
+import apple from '../Assets/imgs/apple.png';
+import adobe from '../Assets/imgs/adobe.png';
+import kaspersky from '../Assets/imgs/kaspersky.png';
+import symantec from '../Assets/imgs/sysmantec.png';
+import samsung from '../Assets/imgs/samsung.png';
+import fortinet from '../Assets/imgs/fortinet.png';
+import lanix from '../Assets/imgs/lanix.png';
+
+import hardwaredown from '../Assets/imgs/hardware_inferior.png';
+
+import belden from '../Assets/imgs/belden.png';
+import zkteco from '../Assets/imgs/zkteco.png';
+import ubiquiti from '../Assets/imgs/ubiquiti.png';
+import hikvision from '../Assets/imgs/hikvision.png';
+import suprema from '../Assets/imgs/suprema.png';
+import access from '../Assets/imgs/access.png';
+import came from '../Assets/imgs/came.png';
+import surefi from '../Assets/imgs/surefi.png';
+import cyberpower from '../Assets/imgs/cyberpower.png';
+import alvarado from '../Assets/imgs/alvarado.png';
+import smartbitt from '../Assets/imgs/smartbitt.png';
+import smart from '../Assets/imgs/smart.png';
+import apc from '../Assets/imgs/apc.png';
+import isb from '../Assets/imgs/isb.png';
+
+import cableado from '../Assets/imgs/cableado.png';
+import reubicacion from '../Assets/imgs/reubicacion.png';
+import controles from '../Assets/imgs/controles.png';
+import video from '../Assets/imgs/video.png';
+import red from '../Assets/imgs/red.png';
+import cableadoe from '../Assets/imgs/cableadoe.png';
+import cctv from '../Assets/imgs/cctv.png';
+import arrendamiento from '../Assets/imgs/arrendamiento.png';
+
+
+
 
 export default function Hardware() {
     const useStyles = makeStyles((theme) => ({
         carouselBorderRadius: {
-            borderBottomLeftRadius: 25
+            borderBottomLeftRadius: 25,
+            borderBottomRightRadius: 25,
         },
         subtitle: {
             fontWeight: 'bold',
             color: theme.palette.text.gray
+        },
+        gray: {
+            color: theme.palette.text.gray
+        },
+        firstOrientation: {
+            flexDirection: 'column-reverse',
+            [theme.breakpoints.up('md')]: {
+                flexDirection: 'row',
+
+            }
         }
     }))
 
     const classes = useStyles();
     return (
-        <Container maxWidth="xl">
-
-            {/* <Grid xs='6'>
-            <SistemsQuadInfo 
-            img={cableadoEstructurado}
-            title='Cableado estructurado'
-            description='Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.'
-            />
-          </Grid> */}
-            {/* <Grid xs='6'>
-            <TitleWhitDecorate 
-            title='Hola mundo'
-            />
-          </Grid> */}
-
-
-            {/* <Grid xs='12'>
-            <AreaDescription 
-            img={informaticaForenceImg}
-            >
-              <TitleWhitDecorate 
-              title='Hola mundo'
-              />
-              <p style={{marginRight: 40 + 'px'}} > Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum itaque, dolor aperiam blanditiis atque accusamus labore tempora at quia unde temporibus inventore, laborum esse magni sed laudantium neque deleniti sint
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nemo, obcaecati laudantium praesentium tempora quae possimus nulla explicabo dicta voluptatum, vel minima nihil sed nobis autem. Sit, ut dolor? Debitis!
-              </p>
-              <Grid item xs={12}>
-                <CarruselCompany
-                  imgs={[ {
-                      id: '1',
-                      cover: informaticaForenceImg
-                    },
-                    {
-                      id: '2',
-                      cover: informaticaForenceImg
-                    },
-                    {
-                      id: '3',
-                      cover: informaticaForenceImg
-                    },
-                    {
-                      id: '4',
-                      cover: informaticaForenceImg
-                    },
-                    {
-                      id: '5',
-                      cover: informaticaForenceImg
-                    },
-                    {
-                      id: '6',
-                      cover: informaticaForenceImg
-                    },
-                    {
-                      id: '7',
-                      cover: informaticaForenceImg
-                    },
-                    {
-                      id: '8',
-                      cover: informaticaForenceImg
-                    }
-                  ]
-                  }
-                />
-              </Grid>
-            </AreaDescription>
-          </Grid> */}
+        <Container maxWidth="lg">
             <Grid container>
-                <Grid container justify="center" item xs={12} >
-                    <PageTitle
-                        img={sistemasLogo}
-                        title="Ingenieria en Sistemas"
-                    />
+                <Grid container item className={classes.firstOrientation}>
+                    <Grid container justify="center" item xs={12} md={6}>
+                        <Grid item>
+                            <PageTitle
+                                img={sistemasLogo}
+                                title="Ingenieria en Sistemas"
+                            />
+                            <InfoVerticalDecorate
+                                title='El principal compromiso es ofrecer consultoria tecnológica profesional'
+                                details='Nuestro equipo se encuentra capacitado para dar soporte técnico a usuarios de manera remota o presencial, en las distintas plataformas en equipos de cómputo (Microsoft Windows, MacOS, GNU / Linux) así como también a dispositivos móviles (Android, iOS)'
+                            />
+                        </Grid>
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <Paper elevation={5} className={classes.carouselBorderRadius}>
+                            <CarruselPage
+                                imgs={[{
+                                    id: '1',
+                                    cover: oneCarousel
+                                },
+                                {
+                                    id: '2',
+                                    cover: twoCarousel
+                                },
+                                {
+                                    id: '3',
+                                    cover: threeCarousel
+                                },
+                                {
+                                    id: '4',
+                                    cover: fourCarousel
+                                }]}
+                            />
+                        </Paper>
+                    </Grid>
                 </Grid>
-                <Grid item xs={12} >
-                    <Paper elevation={10} className={classes.carouselBorderRadius}>
-                        <CarruselPage
+                <Grid container item xs={12} style={{ marginTop: 20 }}>
+                    <Grid item xs={12} md={2}>
+                        <Typography variant="h5" align="center" className={classes.subtitle}>
+                            Socios Tecnológicos
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12} md={10} >
+                        <CarruselCompany
                             imgs={[{
                                 id: '1',
-                                cover: informaticaForenceImg
+                                cover: dell
                             },
                             {
                                 id: '2',
-                                cover: informaticaForenceImg
+                                cover: hp
                             },
                             {
                                 id: '3',
-                                cover: informaticaForenceImg
+                                cover: lenovo
                             },
                             {
                                 id: '4',
-                                cover: informaticaForenceImg
+                                cover: windows
                             },
                             {
                                 id: '5',
-                                cover: informaticaForenceImg
+                                cover: office
                             },
                             {
                                 id: '6',
-                                cover: informaticaForenceImg
+                                cover: apple
                             },
                             {
                                 id: '7',
-                                cover: informaticaForenceImg
+                                cover: adobe
                             },
                             {
                                 id: '8',
-                                cover: informaticaForenceImg
-                            }]}
+                                cover: kaspersky
+                            },
+                            {
+                                id: '9',
+                                cover: symantec
+                            }, {
+                                id: '10',
+                                cover: samsung
+                            }, {
+                                id: '11',
+                                cover: fortinet
+                            }, {
+                                id: '12',
+                                cover: lanix
+                            },
+                            ]
+                            }
                         />
-                    </Paper>
+                    </Grid>
                 </Grid>
-                <Grid item xs={12}>
-                    <InfoVerticalDecorate
-                        title='El principal compromiso es ofrecer consultoria tecnológica profesional'
-                        details='Nuestro equipo se encuentra capacitado para dar soporte técnico a usuarios de manera remota o presencial, en las distintas plataformas en equipos de cómputo (Microsoft Windows, MacOS, GNU / Linux) así como también a dispositivos móviles (Android, iOS)'
-                    />
+                <Grid container spacing={4}>
+                    <Grid item xs={12}>
+                        <TitleWhitDecorate title='Nuestros Servicios' />
+                    </Grid>
+                    <Grid item xs={12} md={4}>
+                        <InfoHoverCard
+                            img={informaticaForenceImg}
+                            logo={informaticaForenceImgLogo}
+                            title='Informatica Forense'
+                            description='Brindamos soluciones dedicadas a la Seguridad de la información y Peritaje Informático Forense ofreciendo alternativas preventivas y correctivas para salvaguarda las propiedades digitales y la información valiosa de su negocio.'
+                        />
+                    </Grid>
+                    <Grid item xs={12} md={4}>
+                        <InfoHoverCard
+                            img={soporte}
+                            logo={soporteLogo}
+                            title='Soporte Técnico'
+                            description='Servicios en sitio y remoto a sus equipos de cómputo y apoyo a sus usuarios.'
+                        />
+                    </Grid>
+                    <Grid item xs={12} md={4}>
+                        <InfoHoverCard
+                            img={seguridad}
+                            logo={seguridadLogo}
+                            title='Seguridad Administrada'
+                            description='Utilizamos las herramientas de seguridad más robustas para mantener la seguridad e integridad de la información de nuestros clientes, a través de la implementación de diferentes metodologías para la protección de datos (DRP, implementación de políticas, respaldos automáticos, borrado seguro de la información, etc.)'
+                        />
+                    </Grid>
+                    <Grid item xs={12} md={4}>
+                        <InfoHoverCard
+                            img={nube}
+                            logo={nubeLogo}
+                            title='Servicios en la Nube'
+                            description='Flexibilidad y alta eficiencia en tu negocio optimizando costos para crecer a tu propio ritmo.'
+                        />
+                    </Grid>
+                    <Grid item xs={12} md={4}>
+                        <InfoHoverCard
+                            img={comunicaciones}
+                            logo={comunicacionesLogo}
+                            title='Comunicaciones Unificadas'
+                            description='Integración de equipos altamente productivos para facilitar la comunicación segura, confiable y totalmente dispobible para cada uno de los colaboradores.'
+                        />
+                    </Grid>
+                    <Grid item xs={12} md={4}>
+                        <InfoHoverCard
+                            img={respaldos}
+                            logo={respaldosLogo}
+                            title='Sistemas de respaldos de Información'
+                            description='Solución de Resguardo de Información automatizado  bajo estandar de políticas.'
+                        />
+                    </Grid>
+                    <Grid item xs={12} md={4}>
+                        <InfoHoverCard
+                            img={infra}
+                            logo={infraLogo}
+                            title='Administración de Infraestructura'
+                            description='Es un servicios basado en las mejores prácticas en IT que nos permite operar, proporcionar soporte y mantenimiento proactivo a la infraestructura de nuestros clientes. '
+                        />
+                    </Grid>
+                    <Grid item xs={12} md={4}>
+                        <InfoHoverCard
+                            img={telefonia}
+                            logo={telefoniaLogo}
+                            title='Telefonía IP'
+                            description='Actualización de Tecnológia a costos accesibles logrando reducción de costos en sus servicios de telefonicos.'
+                        />
+                    </Grid>
+                    <Grid item xs={12} md={4}>
+                        <InfoHoverCard
+                            img={correo}
+                            logo={correoLogo}
+                            title='Correo Electrónico'
+                            description='Como Partner de los  principales proveedores de servicios de Correo electrónico SOMA cuenta con un abanico de posibilidades de soluciones de comunicación escrita por este medio.'
+                        />
+                    </Grid>
+                    <Grid item xs={12} md={4}>
+                        <InfoHoverCard
+                            img={procesos}
+                            logo={procesosLogo}
+                            title='Creación de Procesos  en IT'
+                            description='Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. '
+                        />
+                    </Grid>
+                    <Grid item xs={12} md={4}>
+                        <InfoHoverCard
+                            img={aspel}
+                            logo={aspelLogo}
+                            title='Soporte Aspel / Compac'
+                            description='Contamos con personal altamente capacitado para dar soporte de manera técnica (no de operación) para sistemas Aspel y Contpqa, realizar migraciones de sistemas a nuevos dispositivos e implementación de los mismos.'
+                        />
+                    </Grid>
                 </Grid>
-                <Grid xs={12}>
-                    <Typography variant="h5" align="center" className={classes.subtitle}>
-                        Socios Tecnológicos
-                    </Typography>
-                    <CarruselCompany
-                        imgs={[{
-                            id: '1',
-                            cover: informaticaForenceImg
-                        },
-                        {
-                            id: '2',
-                            cover: informaticaForenceImg
-                        },
-                        {
-                            id: '3',
-                            cover: informaticaForenceImg
-                        },
-                        {
-                            id: '4',
-                            cover: informaticaForenceImg
-                        },
-                        {
-                            id: '5',
-                            cover: informaticaForenceImg
-                        },
-                        {
-                            id: '6',
-                            cover: informaticaForenceImg
-                        },
-                        {
-                            id: '7',
-                            cover: informaticaForenceImg
-                        },
-                        {
-                            id: '8',
-                            cover: informaticaForenceImg
-                        }
-                        ]
-                        }
-                    />
+                <Grid item xs={12} style={{ marginTop: 20 }}>
+
+                    <AreaDescription
+                        img={hardwaredown}
+                    >
+                        <Grid container item >
+                            <TitleWhitDecorate
+                                title='Servicios Infraestructura'
+                            />
+                        </Grid>
+                        <Typography className={classes.gray}>
+                            Analiza la vulnerabilidades de red, equipos físicos y brechas en seguridad informática así como las de la seguridad de la información conlleva el diseño de procedimientos que te dotan de los medios necesarios para impedir que tu información y tus datos caigan en manos ajenas.
+                        </Typography>
+                        <Grid item xs={12} style={{ margin: '25px 0' }}>
+                            <CarruselCompany
+                                imgs={[{
+                                    id: '1',
+                                    cover: belden
+                                },
+                                {
+                                    id: '2',
+                                    cover: zkteco
+                                },
+                                {
+                                    id: '3',
+                                    cover: ubiquiti
+                                },
+                                {
+                                    id: '4',
+                                    cover: hikvision
+                                },
+                                {
+                                    id: '5',
+                                    cover: suprema
+                                },
+                                {
+                                    id: '6',
+                                    cover: access
+                                },
+                                {
+                                    id: '7',
+                                    cover: came
+                                },
+                                {
+                                    id: '8',
+                                    cover: surefi
+                                },
+                                {
+                                    id: '9',
+                                    cover: cyberpower
+                                }, {
+                                    id: '10',
+                                    cover: alvarado
+                                }, {
+                                    id: '11',
+                                    cover: smartbitt
+                                }, {
+                                    id: '12',
+                                    cover: smart
+                                }, {
+                                    id: '13',
+                                    cover: apc
+                                }, {
+                                    id: '14',
+                                    cover: isb
+                                }
+                                ]}
+                            />
+                        </Grid>
+                    </AreaDescription>
                 </Grid>
-                <Grid item xs={12}>
-                    <InfoHoverCard
-                        img={informaticaForenceImg}
-                        logo={informaticaForenceImgLogo}
-                        title='Informatica Forense'
-                        description='Brindamos soluciones dedicadas a la Seguridad de la información y Peritaje Informático Forense ofreciendo alternativas preventivas y correctivas para salvaguarda las propiedades digitales y la información valiosa de su negocio.'
-                    />
-                </Grid>
-                <Grid item xs={12}>
-                    <InfoHoverCard
-                        img={soporte}
-                        logo={soporteLogo}
-                        title='Soporte Técnico'
-                        description='Servicios en sitio y remoto a sus equipos de cómputo y apoyo a sus usuarios.'
-                    />
-                </Grid>
-                <Grid item xs={12}>
-                    <InfoHoverCard
-                        img={seguridad}
-                        logo={seguridadLogo}
-                        title='Seguridad Administrada'
-                        description='Utilizamos las herramientas de seguridad más robustas para mantener la seguridad e integridad de la información de nuestros clientes, a través de la implementación de diferentes metodologías para la protección de datos (DRP, implementación de políticas, respaldos automáticos, borrado seguro de la información, etc.)'
-                    />
-                </Grid>
-                <Grid item xs={12}>
-                    <InfoHoverCard
-                        img={nube}
-                        logo={nubeLogo}
-                        title='Servicios en la Nube'
-                        description='Flexibilidad y alta eficiencia en tu negocio optimizando costos para crecer a tu propio ritmo.'
-                    />
-                </Grid>
-                <Grid item xs={12}>
-                    <InfoHoverCard
-                        img={comunicaciones}
-                        logo={comunicacionesLogo}
-                        title='Comunicaciones Unificadas'
-                        description='Integración de equipos altamente productivos para facilitar la comunicación segura, confiable y totalmente dispobible para cada uno de los colaboradores.'
-                    />
-                </Grid>
-                <Grid item xs={12}>
-                    <InfoHoverCard
-                        img={respaldos}
-                        logo={respaldosLogo}
-                        title='Sistemas de respaldos de Información'
-                        description='Solución de Resguardo de Información automatizado  bajo estandar de políticas.'
-                    />
-                </Grid>
-                <Grid item xs={12}>
-                    <InfoHoverCard
-                        img={infra}
-                        logo={infraLogo}
-                        title='Administración de Infraestructura'
-                        description='Es un servicios basado en las mejores prácticas en IT que nos permite operar, proporcionar soporte y mantenimiento proactivo a la infraestructura de nuestros clientes. '
-                    />
-                </Grid>
-                <Grid item xs={12}>
-                    <InfoHoverCard
-                        img={telefonia}
-                        logo={telefoniaLogo}
-                        title='Telefonía IP'
-                        description='Actualización de Tecnológia a costos accesibles logrando reducción de costos en sus servicios de telefonicos.'
-                    />
-                </Grid>
-                <Grid item xs={12}>
-                    <InfoHoverCard
-                        img={correo}
-                        logo={correoLogo}
-                        title='Correo Electrónico'
-                        description='Como Partner de los  principales proveedores de servicios de Correo electrónico SOMA cuenta con un abanico de posibilidades de soluciones de comunicación escrita por este medio.'
-                    />
-                </Grid>
-                <Grid item xs={12}>
-                    <InfoHoverCard
-                        img={procesos}
-                        logo={procesosLogo}
-                        title='Creación de Procesos  en IT'
-                        description='Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. '
-                    />
-                </Grid>
-                <Grid item xs={12}>
-                    <InfoHoverCard
-                        img={aspel}
-                        logo={aspelLogo}
-                        title='Soporte Aspel / Compac'
-                        description='Contamos con personal altamente capacitado para dar soporte de manera técnica (no de operación) para sistemas Aspel y Contpqa, realizar migraciones de sistemas a nuevos dispositivos e implementación de los mismos.'
-                    />
+                <Grid container style={{ marginTop: '20px' }} >
+                    <Grid item xs={12} md={6}>
+                        <SistemsQuadInfo
+                            img={cableado}
+                            title='Cableado estructurado'
+                            description='Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.'
+                        />
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <SistemsQuadInfo
+                            img={reubicacion}
+                            title='Reubicacion de Site'
+                            description='Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.'
+                        />
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <SistemsQuadInfo
+                            img={controles}
+                            title='Controles de Accesos'
+                            description='Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.'
+                        />
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <SistemsQuadInfo
+                            img={video}
+                            title='Video Vigilancia'
+                            description='Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.'
+                        />
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <SistemsQuadInfo
+                            img={red}
+                            title='Red LAN y WLAN '
+                            description='Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.'
+                        />
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <SistemsQuadInfo
+                            img={cableadoe}
+                            title='Cableado Eléctrico'
+                            description='Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.'
+                        />
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <SistemsQuadInfo
+                            img={cctv}
+                            title='CCTV'
+                            description='Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.'
+                        />
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <SistemsQuadInfo
+                            img={arrendamiento}
+                            title='Arrendamiento de Hardware'
+                            description='Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.'
+                        />
+                    </Grid>
                 </Grid>
             </Grid>
 
-
             {/* <Grid xs={12} >
-            <TitleEnterpriseCarrusel 
-            title='Tecnologia'
-            imgs={[ {
-              id: '1',
-              cover: informaticaForenceImg
-            },
-            {
-              id: '2',
-              cover: informaticaForenceImg
-            },
-            {
-              id: '3',
-              cover: informaticaForenceImg
-            },
-            {
-              id: '4',
-              cover: informaticaForenceImg
-            },
-            {
-              id: '5',
-              cover: informaticaForenceImg
-            },
-            {
-              id: '6',
-              cover: informaticaForenceImg
-            },
-            {
-              id: '7',
-              cover: informaticaForenceImg
-            },
-            {
-              id: '8',
-              cover: informaticaForenceImg
-            }
-          ]
-          }
-            />
-          </Grid> */}
-            {/* <Grid xs={12} >
-            <ImgDescription
-            title='Hola mundo'
-            description='hola dfefsf  sfs ds  asfgasdgsdgsdg sdgsdgsdg sdgsdgsdgsd sdgsdgsdgsd  sdgsdg sdgsdg'
-            img={informaticaForenceImg}
-            /> 
-          </Grid>*/}
-            {/* <Grid xs={12} >
-            <InfoImage
-            title='Hola mundo'
-            description='hola dfefsf  sfs ds  asfgasdgsdgsdg sdgsdgsdg sdgsdgsdgsd sdgsdgsdgsd  sdgsdg sdgsdg'
-            img={informaticaForenceImg}
-            />
-          </Grid> */}
-            {/* <Grid xs={5} >
+                <TitleEnterpriseCarrusel
+                    title='Tecnologia'
+                    imgs={[{
+                        id: '1',
+                        cover: informaticaForenceImg
+                    },
+                    {
+                        id: '2',
+                        cover: informaticaForenceImg
+                    },
+                    {
+                        id: '3',
+                        cover: informaticaForenceImg
+                    },
+                    {
+                        id: '4',
+                        cover: informaticaForenceImg
+                    },
+                    {
+                        id: '5',
+                        cover: informaticaForenceImg
+                    },
+                    {
+                        id: '6',
+                        cover: informaticaForenceImg
+                    },
+                    {
+                        id: '7',
+                        cover: informaticaForenceImg
+                    },
+                    {
+                        id: '8',
+                        cover: informaticaForenceImg
+                    }
+                    ]
+                    }
+                />
+            </Grid>
+            <Grid xs={12} >
+                <ImgDescription
+                    title='Hola mundo'
+                    description='hola dfefsf  sfs ds  asfgasdgsdgsdg sdgsdgsdg sdgsdgsdgsd sdgsdgsdgsd  sdgsdg sdgsdg'
+                    img={informaticaForenceImg}
+                />
+            </Grid>
+            <Grid xs={12} >
+                <InfoImage
+                    title='Hola mundo'
+                    description='hola dfefsf  sfs ds  asfgasdgsdgsdg sdgsdgsdg sdgsdgsdgsd sdgsdgsdgsd  sdgsdg sdgsdg'
+                    img={informaticaForenceImg}
+                />
+            </Grid>
+            <Grid xs={5} >
                 <ImageOffsetInfo
                     title='Hola mundo'
                     description='hola dfefsf  sfs ds  asfgasdgsdgsdg sdgsdgsdg sdgsdgsdgsd sdgsdgsdgsd  sdgsdg sdgsdg'
                     img={informaticaForenceImg}
                 />
             </Grid> */}
-        </Container>
+        </Container >
     )
 }

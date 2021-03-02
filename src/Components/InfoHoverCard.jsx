@@ -80,11 +80,15 @@ const InfoHoverCard = ({ img, title, description, logo }) => {
       }
     },
     bg: {
-      backgroundColor: 'white'
+      backgroundColor: 'white',
+      height: 70,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center'
     },
     animationSweet: {
       animationName: '$entradaSuave',
-      animationDuration: '2s',
+      animationDuration: '1s',
       animationTimingFunction: 'ease',
     },
     '@keyframes entradaSuave': {

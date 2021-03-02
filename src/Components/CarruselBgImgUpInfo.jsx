@@ -1,18 +1,18 @@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css'; 
+import 'react-multi-carousel/lib/styles.css';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box } from '@material-ui/core';
 import BgImgUpInfo from './BgImgUpInfo';
 
-const CarruselBgImgUpInfo = ({data}) => {
+const CarruselBgImgUpInfo = ({ data }) => {
 
-  const useStyles = makeStyles( (theme) => ({
+  const useStyles = makeStyles((theme) => ({
     root: {
       backgroundColor: 'transparent',
-      margin: '20px 0px'
+      margin: '35px 0px'
     },
-  }) )
+  }))
 
   const classes = useStyles();
 
@@ -38,14 +38,14 @@ const CarruselBgImgUpInfo = ({data}) => {
   return (
     <Box className={classes.root}>
       <Carousel responsive={responsive}>
-        {data.map( data => (
+        {data.map(data => (
           <div key={data.id}>
-            <BgImgUpInfo 
-            title={data.title} 
-            description={data.description} 
-            logo={data.logo}  />
+            <BgImgUpInfo
+              title={data.title}
+              description={data.description}
+              logo={data.logo} />
           </div>
-        ) )}
+        ))}
       </Carousel>
     </ Box>
   )

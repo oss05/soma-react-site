@@ -5,13 +5,13 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
-const SistemsQuadInfo = ({img, title, description}) => {
+const SistemsQuadInfo = ({ img, title, description }) => {
   const useStyles = makeStyles((theme) => ({
     root: {
       padding: '10px',
-      backgroundColor: '#E5E5E5',
+      // backgroundColor: '#E5E5E5',
       display: 'flex',
-      width: '100%',
+      // width: '100%',
       boxShadow: 'none',
       flexDirection: 'row',
       [theme.breakpoints.down('md')]: {
@@ -22,22 +22,26 @@ const SistemsQuadInfo = ({img, title, description}) => {
     details: {
       display: 'flex',
       flexDirection: 'column',
-      width: '80%',
+      // width: '80%',
     },
     content: {
       flex: '1 0 auto',
     },
     cover: {
-      width: '20%',
-      margin: '30px 0px',
-      backgroundSize: 'auto 100%',
+      width: '50%',
+      marginRight: '10px',
+      backgroundSize: 'contain',
       [theme.breakpoints.down('md')]: {
         margin: '0px 0px',
-        height: '110px'
+        height: '110px',
+        marginRight: 0,
+
       },
     },
     title: {
-      fontSize: '20px',
+      fontSize: '25px',
+      fontWeight: 'bold',
+      marginBottom: '0.5em',
       [theme.breakpoints.down('md')]: {
         textAlign: 'center',
       },
