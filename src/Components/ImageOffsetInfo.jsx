@@ -11,7 +11,7 @@ const ImageOffsetInfo = ({ title, img, description }) => {
       boxShadow: '14px 12px 35px rgba(0, 0, 0, 0.2)',
       position: 'relative',
       width: '400px',
-      height: '660px',
+      height: '700px',
       paddingBottom: '0px',
       padding: '10px 20px',
       borderRadius: '30px',
