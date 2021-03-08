@@ -39,7 +39,7 @@ const ImageOffsetInfo = ({ title, img, description }) => {
     detailsContainer: {
       height: '240px',
       [theme.breakpoints.up('md')]: {
-        padding: '0px 50px',
+        padding: '0px 25px',
 
       },
       [theme.breakpoints.down('md')]: {
