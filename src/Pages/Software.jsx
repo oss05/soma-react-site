@@ -10,7 +10,7 @@ import ImgDescription from '../Components/ImgDescription';
 import PageTitle from '../Components/PageTitle';
 import CarruselCompany from '../Components/CarruselCompany';
 import informaticaForenceImg from '../Assets/imgs/informaticaForenceCard.png';
-
+import TitleWhitDecorate from '../Components/TitleWhitDecorate'
 import CarruselPage from '../Components/CarruselPage';
 import desarrolloLogo from '../Assets/imgs/desarrollo.png';
 
@@ -33,7 +33,11 @@ import bd from '../Assets/imgs/bd.png';
 import web from '../Assets/imgs/web.png';
 import apps from '../Assets/imgs/apps.png';
 import servicios from '../Assets/imgs/servicios.png'
+import Button1 from '../Components/Button1'
 
+import homeForm from '../Assets/imgs/desarrolloform.png'
+
+import '../scss/Home.scss';
 export default function Software() {
     const useStyles = makeStyles((theme) => ({
         carouselBorderRadius: {
@@ -88,7 +92,7 @@ export default function Software() {
                         </Paper>
                     </Grid>
                 </Grid>
-                <Grid container item xs={12} style={{ marginTop: 20 }}>
+                <Grid container item xs={12} style={{ marginTop: 40 }}>
                     <Grid container alignItems="center" item xs={12} md={2}>
                         <Typography variant="h5" align="center" className={classes.subtitle}>
                             Tecnologías
@@ -133,14 +137,16 @@ export default function Software() {
                         />
                     </Grid>
                 </Grid>
-                <Grid item xs={12} style={{ marginTop: 20 }}>
+                <Grid item xs={12} style={{ marginTop: 40 }}>
                     <ImgDescription
                         title='Nuestras soluciones'
                         description='No solo se enfocan en el desarrollo de software sino en el estudio meticuloso de los procesos que se llevan a cabo, brindando un servicio único gracias a nuestros desarrolladores y científicos expertos además de aplicar diversas metodologías de desarrollo ágil en nuestros procesos de creación.'
                         img={softwaredown}
                     />
                 </Grid>
-                <Grid item xs={12} style={{ marginTop: 20 }}>
+                <Grid item xs={12} style={{ marginTop: 40 }}>
+                    <TitleWhitDecorate title="Servicios" />
+
                     <InfoImage
                         title='Administración de base de Datos'
                         description={['Desarrollo de interfaz de programación (A.P.I. por sus siglas en inglés)', 'Monitoreo y control de respaldo', 'Migración de base de datos', 'Actualización de versiones y análisis de compatibilidad', 'Mantenimiento y soporte a base de datos existentes']}
@@ -164,6 +170,34 @@ export default function Software() {
                         direction="row-reverse"
                     />
                 </Grid>
+                <section className="content1 form-container">
+                    <Grid container className={classes.formGrid}>
+                        <Grid item xs={12} md={6} style={{ margin: "3em 0" }}>
+                            <Typography variant="h6" >Nos encantaría saber de usted</Typography>
+                            <Typography variant="body1" className={classes.gray}>¿Buscas buenas soluciones en tu negocio? Deberíamos tener una conversación.</Typography>
+                            <form action="" className="home-form" style={{ margin: "1em 0" }}>
+                                <div>
+                                    <label htmlFor="" style={{ width: "43%" }}> Nombre *
+                                <input type="text" style={{ width: "100%" }} />
+                                    </label>
+                                    <label htmlFor="" style={{ width: "43%" }}> Email *
+                                <input type="text" style={{ width: "100%" }} />
+                                    </label>
+                                </div>
+                                <label htmlFor=""> Mensaje *
+                            <textarea name="" id="" cols="30" rows="10" style={{ width: "90%" }}></textarea>
+                                </label>
+                            </form>
+                            <Button1
+                                text1="Enviar"
+                                text2="mensaje"
+                            />
+                        </Grid>
+                        <Grid item xs={12} md={6}>
+                            <img src={homeForm} alt="" style={{ width: '100%' }} />
+                        </Grid>
+                    </Grid>
+                </section>
             </Grid>
 
             {/* <Grid xs={12} >

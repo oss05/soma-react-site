@@ -24,7 +24,8 @@ const PageTitle = ({ title, img }) => {
     areaDisplay: {
       display: 'none',
       [theme.breakpoints.up('md')]: {
-        display: 'block'
+        display: 'block',
+        marginTop: 120
       }
     },
   }));

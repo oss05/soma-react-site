@@ -6,16 +6,18 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import InfoVerticalDecorate from '../Components/InfoVerticalDecorate';
 import InfoImage from '../Components/InfoImage';
+import ImageOffsetInfo from '../Components/ImageOffsetInfo';
+import DescriptiveCard from '../Components/DescriptiveCard';
 import ImgDescription from '../Components/ImgDescription';
 import PageTitle from '../Components/PageTitle';
 import CarruselCompany from '../Components/CarruselCompany';
 import informaticaForenceImg from '../Assets/imgs/informaticaForenceCard.png';
-
+import Button1 from '../Components/Button1'
 import CarruselPage from '../Components/CarruselPage';
 import desarrolloLogo from '../Assets/imgs/desarrollo.png';
 
 //Imagenes
-import oneCarousel from '../Assets/imgs/1soft.png';
+import oneCarousel from '../Assets/imgs/iotcar1.png';
 import twoCarousel from '../Assets/imgs/2soft.png';
 
 import lutron from '../Assets/imgs/lutron.png';
@@ -35,12 +37,21 @@ import fire from '../Assets/imgs/fire.png';
 import arduino from '../Assets/imgs/arduino.png';
 import rasp from '../Assets/imgs/rasp.png';
 
-import softwaredown from '../Assets/imgs/softwaredown.png';
+import iotdown from '../Assets/imgs/iotdown.png';
+import iot1 from '../Assets/imgs/iot1.png';
+import casa from '../Assets/imgs/casa.png';
+import instalacion from '../Assets/imgs/instalacion.png';
+import seguridad from '../Assets/imgs/seguridad.png';
+import multimedia from '../Assets/imgs/multimedia.png';
+import accesos from '../Assets/imgs/accesos.png';
+import persianas from '../Assets/imgs/persianas.png';
 
-import bd from '../Assets/imgs/bd.png';
-import web from '../Assets/imgs/web.png';
-import apps from '../Assets/imgs/apps.png';
-import servicios from '../Assets/imgs/servicios.png'
+
+import homeForm from '../Assets/imgs/iotform.png'
+import iot11 from '../Assets/imgs/iot11.png'
+import iot22 from '../Assets/imgs/iot2.png'
+
+import '../scss/Home.scss';
 
 export default function IOT() {
     const useStyles = makeStyles((theme) => ({
@@ -53,7 +64,9 @@ export default function IOT() {
             color: theme.palette.text.gray
         },
         gray: {
-            color: theme.palette.text.gray
+            color: theme.palette.text.gray,
+            marginTop: 20,
+            fontWeight: 500
         },
         firstOrientation: {
             flexDirection: 'column',
@@ -68,7 +81,19 @@ export default function IOT() {
                 paddingLeft: 40
 
             }
-        }
+        },
+        title: {
+            fontWeight: 'bold',
+            borderBottom: `6px solid ${theme.palette.primary.main}`,
+            paddingBottom: 4,
+
+        },
+        title2: {
+            fontWeight: 'bold',
+            borderLeft: `6px solid ${theme.palette.primary.main}`,
+            paddingLeft: 8,
+
+        },
     }))
 
     const classes = useStyles();
@@ -83,10 +108,7 @@ export default function IOT() {
                                     id: '1',
                                     cover: oneCarousel
                                 },
-                                {
-                                    id: '2',
-                                    cover: twoCarousel
-                                }]}
+                                ]}
                             />
                         </Paper>
                     </Grid>
@@ -97,13 +119,13 @@ export default function IOT() {
                                 title="IoT"
                             />
                             <InfoVerticalDecorate
-                                title='Te damos las soluciones para Automatizar tu espacio y hacerlo inteligente'
+                                title='Te damos las soluciones para automatizar tu espacio y hacerlo inteligente'
                                 details='Conoce el mejor Sistema de  Automatización que se adecue a tus necesidades.'
                             />
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid container item xs={12} style={{ marginTop: 20 }}>
+                <Grid container item xs={12} style={{ marginTop: 40 }}>
                     <Grid container alignItems="center" item xs={12} md={2}>
                         <Typography variant="h5" align="center" className={classes.subtitle}>
                             Socios Tecnológicos
@@ -183,37 +205,126 @@ export default function IOT() {
                         />
                     </Grid>
                 </Grid>
-                <Grid item xs={12} style={{ marginTop: 20 }}>
-                    <ImgDescription
-                        title='Nuestras soluciones'
-                        description='No solo se enfocan en el desarrollo de software sino en el estudio meticuloso de los procesos que se llevan a cabo, brindando un servicio único gracias a nuestros desarrolladores y científicos expertos además de aplicar diversas metodologías de desarrollo ágil en nuestros procesos de creación.'
-                        img={softwaredown}
-                    />
+                <Grid container item style={{ marginTop: 40 }}>
+                    <Grid item xs={12} md={4} style={{ marginTop: 20, paddingRight: 30 }}>
+                        <Typography variant="h4" component="span" className={classes.title}>El objetivo</Typography>
+                        <Typography variant="body" component="p" className={classes.gray}>
+                            Crear el diseño de un sistema basado en la tecnología IP, automatización de audio, luz y video por medio de controladores de voz y dispositivos en red.
+                        </Typography>
+                        <Typography variant="body" component="p" className={classes.gray}>
+                            Los cuales le permitira al usuario el control inalámbrico y a distancia de su espacio.
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12} md={8} style={{ marginTop: 20 }}>
+                        <ImgDescription
+                            title='Mejorando tu estilo de vida'
+                            description='Llevamos muchos años hablando de cómo será la casa del futuro. Pero poco a poco ese hogar se va convirtiendo en realidad. Desde el móvil podemos controlar nuestra vivienda.'
+                            img={iot1}
+                        />
+                    </Grid>
                 </Grid>
-                <Grid item xs={12} style={{ marginTop: 20 }}>
-                    <InfoImage
-                        title='Administración de base de Datos'
-                        description={['Desarrollo de interfaz de programación (A.P.I. por sus siglas en inglés)', 'Monitoreo y control de respaldo', 'Migración de base de datos', 'Actualización de versiones y análisis de compatibilidad', 'Mantenimiento y soporte a base de datos existentes']}
-                        img={bd}
-                    />
-                    <InfoImage
-                        title='Desarrollo Web'
-                        description={['Aplicación web dinámicas (HTML5, CSS4 y JS Ecmascript 5)', 'Programación a nivel de servidor (Php, C, C++, C#, Python y .Net 3.5)', 'Páginas web ( Web services)', 'Implemento y soporte a servidores y sitios web existentes']}
-                        img={web}
-                        direction="row-reverse"
-                    />
-                    <InfoImage
-                        title='Apps Móviles'
-                        description={['Aplicaciónes móviles (iOS y Android)', 'Aplicaciones móbiles híbridas con Phonegap (iOS, Android y Windows Phone)', 'Servicios de notificaciones Push', 'Auditoría de compatibilidad, seguridad y rendimiento', 'Mantenimiento y soporte a aplicaciones móviles existentes']}
-                        img={apps}
-                    />
-                    <InfoImage
-                        title='Servicios Logísticos'
-                        description={['Analisis y levantamiento de requerimientos', 'Auditoria de Software', 'Asesoría de inversión en sistemas de computo', 'Planificación de control interno', 'Toma de servicios y servidores']}
-                        img={servicios}
-                        direction="row-reverse"
-                    />
+                <Grid container item style={{ marginTop: 40 }}>
+                    <Grid item xs={12} md={5} style={{ marginTop: 60, paddingRight: 30 }}>
+                        <Typography variant="h4" component="span" className={classes.title}>¿Qué puedes automatizar en tu casa?</Typography>
+                        <Typography variant="body" component="p" className={classes.gray} style={{ marginTop: 40 }}>
+                            puedes controlar varios sistemas que interactúan en ella,
+                            por ejemplo, audio, video, iluminación, seguridad, temperatura, alarma.
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12} md={7} style={{ marginTop: 20 }}>
+                        <img src={iotdown} alt="" style={{ width: '100%' }} />
+                    </Grid>
                 </Grid>
+                <Grid container item >
+                    <Grid item xs={12} md={8} style={{ marginTop: 40 }}>
+                        <img src={casa} alt="" style={{ width: '100%' }} />
+                    </Grid>
+                    <Grid container alignItems="center" item xs={12} md={4} style={{ marginTop: 20 }}>
+                        <Typography variant="h4" className={classes.title2} style={{ marginLeft: 30 }}>Descubra las posibilidades y ventajas de disponer de un control y seguridad ilimitado</Typography>
+                    </Grid>
+                </Grid>
+                <Grid container justify="space-around" item xs={12} style={{ marginTop: 20 }}>
+                    <Grid item xs={10} md={2} style={{ margin: '1em 0' }}>
+                        <DescriptiveCard
+                            logo={instalacion}
+                            title="Instalación sin obras"
+                            description="La instalación se realiza sin obras.  adaptándonos a la vivienda ya construida"
+                        />
+                    </Grid>
+                    <Grid item xs={10} md={2} style={{ margin: '1em 0' }}>
+                        <DescriptiveCard
+                            logo={seguridad}
+                            title="Seguridad y videovigilancia"
+                            description="La instalación se realiza sin obras.  adaptándonos a la vivienda ya construida"
+                        />
+                    </Grid>
+                    <Grid item xs={10} md={2} style={{ margin: '1em 0' }}>
+                        <DescriptiveCard
+                            logo={multimedia}
+                            title="Multimedia y control por voz"
+                            description="Envíe los contenidos multimedia desde su móvil a televisores, altavoces y proyectores. Controle dispositivos por voz con Alexa y Google home."
+                        />
+                    </Grid>
+                    <Grid item xs={10} md={2} style={{ margin: '1em 0' }}>
+                        <DescriptiveCard
+                            logo={accesos}
+                            title="Control de accesos"
+                            description="Puede ver y hablar a través del móvil con la persona que llama a su videoportero. Puede abrir remotamente cualquier puerta de paso o de garaje."
+                        />
+                    </Grid>
+                    <Grid item xs={10} md={2} style={{ margin: '1em 0' }}>
+                        <DescriptiveCard
+                            logo={persianas}
+                            title="Control de persianas"
+                            description="el uso de persianas es vital Abrirlas y cerrarlas es posible a través de un dispositivo que envía señales a los motores debidamente instalados en éstas."
+                        />
+                    </Grid>
+                </Grid>
+                <Grid container justify="space-around" item xs={12} style={{ marginTop: 60 }}>
+                    <Grid item xs={12} md={5} style={{ margin: '1em 0' }}>
+                        <ImageOffsetInfo
+                            title='Ahorro enegético'
+                            description='El sistema dómotica es capaz de adecuar los gastos de la vivienda al consumo exacto que va a tener, produciendo un ahorro en las facturas de mas de 20% de media por las familias'
+                            img={iot11}
+                        />
+                    </Grid>
+                    <Grid item xs={12} md={5} style={{ margin: '1em 0' }}>
+                        <ImageOffsetInfo
+                            title='Automatización'
+                            description='Configure reglas avanzadas para controlar dispositivos y darle vida a su hogar'
+                            img={iot22}
+                        />
+                    </Grid>
+                </Grid>
+                <section className="content1 form-container">
+
+                    <Grid container className={classes.formGrid}>
+                        <Grid item xs={12} md={6} style={{ margin: "3em 0" }}>
+                            <Typography variant="h6" >Nos encantaría saber de usted</Typography>
+                            <Typography variant="body1" className={classes.gray}>¿Buscas buenas soluciones en tu negocio? Deberíamos tener una conversación.</Typography>
+                            <form action="" className="home-form" style={{ margin: "1em 0" }}>
+                                <div>
+                                    <label htmlFor="" style={{ width: "43%" }}> Nombre *
+                                <input type="text" style={{ width: "100%" }} />
+                                    </label>
+                                    <label htmlFor="" style={{ width: "43%" }}> Email *
+                                <input type="text" style={{ width: "100%" }} />
+                                    </label>
+                                </div>
+                                <label htmlFor=""> Mensaje *
+                            <textarea name="" id="" cols="30" rows="10" style={{ width: "90%" }}></textarea>
+                                </label>
+                            </form>
+                            <Button1
+                                text1="Enviar"
+                                text2="mensaje"
+                            />
+                        </Grid>
+                        <Grid item xs={12} md={6}>
+                            <img src={homeForm} alt="" style={{ width: '100%' }} />
+                        </Grid>
+                    </Grid>
+                </section>
             </Grid>
 
             {/* <Grid xs={12} >

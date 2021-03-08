@@ -54,7 +54,14 @@ const CarruselCompany = ({ imgs }) => {
   };
   return (
     <Paper elevation={5} className={classes.root}>
-      <Carousel responsive={responsive}>
+      <Carousel
+        responsive={responsive}
+        // autoPlay
+        autoPlaySpeed={10}
+        // infinite
+        customTransition="all 1s linear"
+        transitionDuration={1000}
+      >
         {imgs.map(img => (
           <div className={classes.imgContainer} key={img.id}>
             <img src={img.cover} alt="empresa" />

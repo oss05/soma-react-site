@@ -4,9 +4,9 @@ import { Grid, Typography } from '@material-ui/core'
 import TitleWhitDecorate from './TitleWhitDecorate';
 
 
-const ImageOffsetInfo = ({title,img,description}) => {
+const ImageOffsetInfo = ({ title, img, description }) => {
 
-  const useStyles = makeStyles( (theme) => ({
+  const useStyles = makeStyles((theme) => ({
     root: {
       boxShadow: '14px 12px 35px rgba(0, 0, 0, 0.2)',
       position: 'relative',
@@ -17,23 +17,27 @@ const ImageOffsetInfo = ({title,img,description}) => {
       borderBottom: `10px solid ${theme.palette.primary.main}`
     },
     imgContainer: {
-      
+
       width: '100%',
       '& img': {
         position: 'relative',
         top: '-30%',
         borderRadius: '20px',
         width: '100%',
-        height: '125%',
+        height: '400px',
         cursor: 'pointer',
+        objectFit: 'contain'
       },
     },
     detailsContainer: {
       [theme.breakpoints.up('md')]: {
-        padding: '80px 50px',
+        padding: '0px 50px',
+        marginTop: '-120px'
+
       },
       [theme.breakpoints.down('md')]: {
         padding: '15px',
+        marginTop: '-150px'
       }
     },
     info: {

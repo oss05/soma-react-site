@@ -4,9 +4,9 @@ import { Grid, Typography } from '@material-ui/core'
 import TitleWhitDecorate from './TitleWhitDecorate';
 import Button1 from './Button1';
 
-const ImgDescription = ({title,img,description}) => {
+const ImgDescription = ({ title, img, description }) => {
 
-  const useStyles = makeStyles( (theme) => ({
+  const useStyles = makeStyles((theme) => ({
     root: {
       boxShadow: '3px 4px 20px rgba(0, 0, 0, 0.25)',
       background: '#F8F8F8',
@@ -27,23 +27,24 @@ const ImgDescription = ({title,img,description}) => {
       '& img': {
         width: '100%',
         height: '100%',
-        cursor: 'pointer',
+        objectFit: 'cover'
       },
     },
     detailsContainer: {
       [theme.breakpoints.up('md')]: {
-        padding: '100px 50px',
+        padding: '30px 50px',
         borderRight: `10px solid ${theme.palette.primary.main}`,
       },
       [theme.breakpoints.down('md')]: {
-        padding: '30px 30px',
+        padding: '10px 30px',
       }
     },
     info: {
       marginTop: '40px',
       [theme.breakpoints.down('md')]: {
         fontSize: '15px'
-      }
+      },
+      fontWeight: 500
     }
 
   }));
@@ -57,8 +58,13 @@ const ImgDescription = ({title,img,description}) => {
       </Grid>
       <Grid item md={6} xs={12} className={classes.detailsContainer}>
         <TitleWhitDecorate title={title} />
-        <Typography className={classes.info} variant="h6" > {description} </Typography>
-        <Button1/>
+        <Typography className={classes.info} variant="p" > {description} </Typography>
+        <Grid item style={{ marginTop: 80 }}>
+          <Button1
+            text1="Quiero"
+            text2="Saber más"
+          />
+        </Grid>
       </Grid>
     </Grid>
   )

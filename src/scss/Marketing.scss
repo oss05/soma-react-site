@@ -1,0 +1,79 @@
+main {
+    
+}
+.marketing-main {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.section-container {
+    display: flex;
+}
+
+.section-container div{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section-container > div img{
+    width: 100%;
+}
+
+.blue-bold {
+    color: #075ce4;
+}
+
+.imprescindible {
+    font-size: 1.2em;
+}
+
+.svg-path {
+    width: 150px;
+    height: auto;
+}
+
+.first-path {
+    transition: 0.5s all ease;
+
+}
+
+.second-path {
+    fill: white;
+     transition: 1s all ease;
+}
+
+.svg-path:hover *{
+    fill: #ffe942;
+}
+
+.svg-path  {
+ &.svg-path:hover {
+      filter: drop-shadow(0 0 0.75rem yellow); 
+  }
+ }
+
+.third-path, .third-path:hover {
+    fill: #000 !important;
+    filter: drop-shadow(0 0 0.75rem crimson) !important; 
+}
+.imprescindible {
+    font-size: 1.2em;
+}
+
+.special-section-container {
+    width: 100%;
+    display: flex; 
+    justify-content: center
+}
+
+.special-section-container div:nth-child(1){
+    width: 800px;
+}
+
+.special-section-container div:nth-child(2){
+    width: auto;
+}
+
+

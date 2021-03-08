@@ -27,7 +27,7 @@ import informaticaForenceImgLogo from '../Assets/imgs/informaticaForenceCardLogo
 import cableadoEstructurado from '../Assets/imgs/cableadoEstructurado.png';
 import CarruselPage from '../Components/CarruselPage';
 import sistemasLogo from '../Assets/imgs/sistemas_logo.png';
-
+import Button1 from '../Components/Button1'
 //Imagenes
 import soporte from '../Assets/imgs/soporte_tecnico.png';
 import seguridad from '../Assets/imgs/seguridad_administrada.png';
@@ -94,8 +94,9 @@ import red from '../Assets/imgs/red.png';
 import cableadoe from '../Assets/imgs/cableadoe.png';
 import cctv from '../Assets/imgs/cctv.png';
 import arrendamiento from '../Assets/imgs/arrendamiento.png';
+import homeForm from '../Assets/imgs/sistemasform.png'
 
-
+import '../scss/Home.scss';
 
 
 export default function Hardware() {
@@ -109,9 +110,17 @@ export default function Hardware() {
             color: theme.palette.text.gray
         },
         gray: {
-            color: theme.palette.text.gray
+            color: theme.palette.text.gray,
+            fontWeight: 500
         },
         firstOrientation: {
+            flexDirection: 'column-reverse',
+            [theme.breakpoints.up('md')]: {
+                flexDirection: 'row',
+
+            }
+        },
+        formGrid: {
             flexDirection: 'column-reverse',
             [theme.breakpoints.up('md')]: {
                 flexDirection: 'row',
@@ -160,7 +169,7 @@ export default function Hardware() {
                         </Paper>
                     </Grid>
                 </Grid>
-                <Grid container item xs={12} style={{ marginTop: 20 }}>
+                <Grid container item xs={12} style={{ marginTop: 40 }}>
                     <Grid item xs={12} md={2}>
                         <Typography variant="h5" align="center" className={classes.subtitle}>
                             Socios Tecnológicos
@@ -222,7 +231,7 @@ export default function Hardware() {
                     <Grid item xs={12}>
                         <TitleWhitDecorate title='Nuestros Servicios' />
                     </Grid>
-                    <Grid item xs={12} md={4}>
+                    <Grid item xs={12} md={3}>
                         <InfoHoverCard
                             img={informaticaForenceImg}
                             logo={informaticaForenceImgLogo}
@@ -230,7 +239,7 @@ export default function Hardware() {
                             description='Brindamos soluciones dedicadas a la Seguridad de la información y Peritaje Informático Forense ofreciendo alternativas preventivas y correctivas para salvaguarda las propiedades digitales y la información valiosa de su negocio.'
                         />
                     </Grid>
-                    <Grid item xs={12} md={4}>
+                    <Grid item xs={12} md={3}>
                         <InfoHoverCard
                             img={soporte}
                             logo={soporteLogo}
@@ -238,15 +247,15 @@ export default function Hardware() {
                             description='Servicios en sitio y remoto a sus equipos de cómputo y apoyo a sus usuarios.'
                         />
                     </Grid>
-                    <Grid item xs={12} md={4}>
+                    <Grid item xs={12} md={3}>
                         <InfoHoverCard
                             img={seguridad}
                             logo={seguridadLogo}
                             title='Seguridad Administrada'
-                            description='Utilizamos las herramientas de seguridad más robustas para mantener la seguridad e integridad de la información de nuestros clientes, a través de la implementación de diferentes metodologías para la protección de datos (DRP, implementación de políticas, respaldos automáticos, borrado seguro de la información, etc.)'
+                            description='Usamos las mejores herramientas para mantener la seguridad e integridad de la información de nuestros clientes, implementando metodologías para la protección de datos (DRP, implementación de políticas, respaldos automáticos, borrado seguro de la información, etc.)'
                         />
                     </Grid>
-                    <Grid item xs={12} md={4}>
+                    <Grid item xs={12} md={3}>
                         <InfoHoverCard
                             img={nube}
                             logo={nubeLogo}
@@ -254,7 +263,7 @@ export default function Hardware() {
                             description='Flexibilidad y alta eficiencia en tu negocio optimizando costos para crecer a tu propio ritmo.'
                         />
                     </Grid>
-                    <Grid item xs={12} md={4}>
+                    <Grid item xs={12} md={3}>
                         <InfoHoverCard
                             img={comunicaciones}
                             logo={comunicacionesLogo}
@@ -262,7 +271,7 @@ export default function Hardware() {
                             description='Integración de equipos altamente productivos para facilitar la comunicación segura, confiable y totalmente dispobible para cada uno de los colaboradores.'
                         />
                     </Grid>
-                    <Grid item xs={12} md={4}>
+                    <Grid item xs={12} md={3}>
                         <InfoHoverCard
                             img={respaldos}
                             logo={respaldosLogo}
@@ -270,7 +279,7 @@ export default function Hardware() {
                             description='Solución de Resguardo de Información automatizado  bajo estandar de políticas.'
                         />
                     </Grid>
-                    <Grid item xs={12} md={4}>
+                    <Grid item xs={12} md={3}>
                         <InfoHoverCard
                             img={infra}
                             logo={infraLogo}
@@ -278,7 +287,7 @@ export default function Hardware() {
                             description='Es un servicios basado en las mejores prácticas en IT que nos permite operar, proporcionar soporte y mantenimiento proactivo a la infraestructura de nuestros clientes. '
                         />
                     </Grid>
-                    <Grid item xs={12} md={4}>
+                    <Grid item xs={12} md={3}>
                         <InfoHoverCard
                             img={telefonia}
                             logo={telefoniaLogo}
@@ -286,7 +295,7 @@ export default function Hardware() {
                             description='Actualización de Tecnológia a costos accesibles logrando reducción de costos en sus servicios de telefonicos.'
                         />
                     </Grid>
-                    <Grid item xs={12} md={4}>
+                    <Grid item xs={12} md={3}>
                         <InfoHoverCard
                             img={correo}
                             logo={correoLogo}
@@ -294,7 +303,7 @@ export default function Hardware() {
                             description='Como Partner de los  principales proveedores de servicios de Correo electrónico SOMA cuenta con un abanico de posibilidades de soluciones de comunicación escrita por este medio.'
                         />
                     </Grid>
-                    <Grid item xs={12} md={4}>
+                    <Grid item xs={12} md={3}>
                         <InfoHoverCard
                             img={procesos}
                             logo={procesosLogo}
@@ -302,7 +311,7 @@ export default function Hardware() {
                             description='Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. '
                         />
                     </Grid>
-                    <Grid item xs={12} md={4}>
+                    <Grid item xs={12} md={3}>
                         <InfoHoverCard
                             img={aspel}
                             logo={aspelLogo}
@@ -324,7 +333,7 @@ export default function Hardware() {
                         <Typography className={classes.gray}>
                             Analiza la vulnerabilidades de red, equipos físicos y brechas en seguridad informática así como las de la seguridad de la información conlleva el diseño de procedimientos que te dotan de los medios necesarios para impedir que tu información y tus datos caigan en manos ajenas.
                         </Typography>
-                        <Grid item xs={12} style={{ margin: '25px 0' }}>
+                        <Grid item xs={12} style={{ marginTop: '40px' }}>
                             <CarruselCompany
                                 imgs={[{
                                     id: '1',
@@ -382,7 +391,7 @@ export default function Hardware() {
                         </Grid>
                     </AreaDescription>
                 </Grid>
-                <Grid container style={{ marginTop: '20px' }} >
+                <Grid container style={{ marginTop: '40px' }} >
                     <Grid item xs={12} md={6}>
                         <SistemsQuadInfo
                             img={cableado}
@@ -440,6 +449,35 @@ export default function Hardware() {
                         />
                     </Grid>
                 </Grid>
+                <section className="content1 form-container">
+
+                    <Grid container className={classes.formGrid}>
+                        <Grid item xs={12} md={6} style={{ margin: "3em 0" }}>
+                            <Typography variant="h6" >Nos encantaría saber de usted</Typography>
+                            <Typography variant="body1" className={classes.gray}>¿Buscas buenas soluciones en tu negocio? Deberíamos tener una conversación.</Typography>
+                            <form action="" className="home-form" style={{ margin: "1em 0" }}>
+                                <div>
+                                    <label htmlFor="" style={{ width: "43%" }}> Nombre *
+                                <input type="text" style={{ width: "100%" }} />
+                                    </label>
+                                    <label htmlFor="" style={{ width: "43%" }}> Email *
+                                <input type="text" style={{ width: "100%" }} />
+                                    </label>
+                                </div>
+                                <label htmlFor=""> Mensaje *
+                            <textarea name="" id="" cols="30" rows="10" style={{ width: "90%" }}></textarea>
+                                </label>
+                            </form>
+                            <Button1
+                                text1="Enviar"
+                                text2="mensaje"
+                            />
+                        </Grid>
+                        <Grid item xs={12} md={6}>
+                            <img src={homeForm} alt="" style={{ width: '100%' }} />
+                        </Grid>
+                    </Grid>
+                </section>
             </Grid>
 
             {/* <Grid xs={12} >

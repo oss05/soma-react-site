@@ -12,7 +12,7 @@ import CarruselCompany from '../Components/CarruselCompany';
 import CounterInfo from '../Components/CounterInfo';
 import SimpleInfoCard from '../Components/SimpleInfoCard';
 import CarruselBgImgUpInfo from '../Components/CarruselBgImgUpInfo';
-
+import Button1 from '../Components/Button1'
 import informaticaForenceImg from '../Assets/imgs/informaticaForenceCard.png';
 
 import CarruselPage from '../Components/CarruselPage';
@@ -47,6 +47,9 @@ import carrusel1Img5 from '../Assets/imgs/mc1-5.png'
 import chatbot from '../Assets/imgs/chatbot.png'
 import tendencia from '../Assets/imgs/tendencia.png'
 import www from '../Assets/imgs/www.png'
+import homeForm from '../Assets/imgs/marketingform.png'
+
+import '../scss/Home.scss';
 
 
 export default function Marketing() {
@@ -106,35 +109,35 @@ export default function Marketing() {
                         <img src={mkt} alt="" style={{ width: '100%' }} />
                     </Grid>
                 </Grid >
-                <Grid container item xs={12} style={{ marginTop: 20 }}>
+                <Grid container item xs={12} style={{ marginTop: 40 }}>
                     <Grid item xs={12} md={4} style={{ borderRight: 'solid 1px #DADADA' }}>
                         <SimpleInfoCard
                             title="WWW:"
-                            description={[ 
-                              {
-                                id: '1',
-                                data: 'Posicionamiento'
-                              },
-                              {
-                                id: '2',
-                                data: 'Auditorías SEO'
-                              },
-                              {
-                                id: '3',
-                                data: 'Optimizaciones SEO'
-                              }, 
-                              {
-                                id: '4',
-                                data: 'Campañas de Google Ads'
-                              }, 
-                              {
-                                id: '5',
-                                data: 'Redacción'
-                              }, 
-                              {
-                                id: '6',
-                                data: 'Marketing de contenidos'
-                              },   
+                            description={[
+                                {
+                                    id: '1',
+                                    data: 'Posicionamiento'
+                                },
+                                {
+                                    id: '2',
+                                    data: 'Auditorías SEO'
+                                },
+                                {
+                                    id: '3',
+                                    data: 'Optimizaciones SEO'
+                                },
+                                {
+                                    id: '4',
+                                    data: 'Campañas de Google Ads'
+                                },
+                                {
+                                    id: '5',
+                                    data: 'Redacción'
+                                },
+                                {
+                                    id: '6',
+                                    data: 'Marketing de contenidos'
+                                },
                             ]}
                             logo={www}
                         />
@@ -142,31 +145,31 @@ export default function Marketing() {
                     <Grid item xs={12} md={4} style={{ borderRight: 'solid 1px #DADADA' }}>
                         <SimpleInfoCard
                             title="SEO y Google Ads:"
-                            description={[ 
-                              {
-                                id: '1',
-                                data: 'Sitios web'
-                              },
-                              {
-                                id: '2',
-                                data: 'Tiendas de Internet'
-                              },
-                              {
-                                id: '3',
-                                data: 'Portales'
-                              }, 
-                              {
-                                id: '4',
-                                data: 'Aplicaciones dedicadas'
-                              }, 
-                              {
-                                id: '5',
-                                data: 'Auditorías de UX / UI'
-                              }, 
-                              {
-                                id: '6',
-                                data: 'Optimización de sitios web'
-                              },   
+                            description={[
+                                {
+                                    id: '1',
+                                    data: 'Sitios web'
+                                },
+                                {
+                                    id: '2',
+                                    data: 'Tiendas de Internet'
+                                },
+                                {
+                                    id: '3',
+                                    data: 'Portales'
+                                },
+                                {
+                                    id: '4',
+                                    data: 'Aplicaciones dedicadas'
+                                },
+                                {
+                                    id: '5',
+                                    data: 'Auditorías de UX / UI'
+                                },
+                                {
+                                    id: '6',
+                                    data: 'Optimización de sitios web'
+                                },
                             ]}
                             logo={tendencia}
                         />
@@ -174,35 +177,35 @@ export default function Marketing() {
                     <Grid item xs={12} md={4}>
                         <SimpleInfoCard
                             title="Redes sociales:"
-                            description={[ 
-                              {
-                                id: '1',
-                                data: 'Facebook'
-                              },
-                              {
-                                id: '2',
-                                data: 'Instagram'
-                              },
-                              {
-                                id: '3',
-                                data: 'LinkedIn'
-                              }, 
-                              {
-                                id: '4',
-                                data: 'Publicidad en redes sociales'
-                              }, 
-                              {
-                                id: '5',
-                                data: 'Chatbots'
-                              }, 
+                            description={[
+                                {
+                                    id: '1',
+                                    data: 'Facebook'
+                                },
+                                {
+                                    id: '2',
+                                    data: 'Instagram'
+                                },
+                                {
+                                    id: '3',
+                                    data: 'LinkedIn'
+                                },
+                                {
+                                    id: '4',
+                                    data: 'Publicidad en redes sociales'
+                                },
+                                {
+                                    id: '5',
+                                    data: 'Chatbots'
+                                },
                             ]}
                             logo={chatbot}
                         />
                     </Grid>
 
                 </Grid>
-                <Grid item xs={12} style={{ marginTop: 20 }}>
-                    <Typography variant="h4" component="span" className={classes.title}>¿Porque nosotros?</Typography>
+                <Grid item xs={12} style={{ marginTop: 40 }}>
+                    <Typography variant="h4" component="span" className={classes.title}>¿Por qué nosotros?</Typography>
                     <CarruselBgImgUpInfo
                         data={[{
                             id: '1',
@@ -238,10 +241,10 @@ export default function Marketing() {
                         }
                     />
                 </Grid>
-                <Grid container item xs={12} justify="space-around">
+                <Grid container item xs={12} justify="space-around" style={{ marginTop: 40 }}>
                     <Grid item xs={12} md={6}>
                         <Typography variant="h4" component="span" className={classes.title}>Qué hacemos</Typography> <br /> <br /><br />
-                        <Typography variant="body" className={classes.bodytext}>Puede confiarnos la gestión integral de su actividad en Internet. Obtendrá un socio confiable y comprometido, gracias al cual podrá concentrarse en su negocio. Estaremos encantados de convertirnos en su departamento de e-marketing.</Typography>
+                        <Typography variant="body1" className={classes.bodytext}>Puede confiarnos la gestión integral de su actividad en Internet. Obtendrá un socio confiable y comprometido, gracias al cual podrá concentrarse en su negocio. Estaremos encantados de convertirnos en su departamento de e-marketing.</Typography>
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <img src={mtdown} style={{ width: '100%' }} />
@@ -254,10 +257,39 @@ export default function Marketing() {
                     <Grid item xs={12} md={6}>
                         <Typography variant="h4" component="span" className={classes.title}>Sitios web</Typography>
                         <Typography variant="h6" className={classes.subtext}>¿Quiere un sitio web que sea su mejor comerciante? </Typography>
-                        <Typography variant="body" >Permítanos enfocarlo de esta manera: deje que cause una excelente primera impresión en sus clientes. Presentará sus fortalezas de manera ejemplar y presentará su oferta de manera atractiva. Que fomente el contacto y facilítelo incluso para los que "no están en Internet". Este será el sitio web que prepararemos para usted, sabemos cómo hacerlo.</Typography>
+                        <Typography variant="body1" >Permítanos enfocarlo de esta manera: deje que cause una excelente primera impresión en sus clientes. Presentará sus fortalezas de manera ejemplar y presentará su oferta de manera atractiva. Que fomente el contacto y facilítelo incluso para los que "no están en Internet". Este será el sitio web que prepararemos para usted, sabemos cómo hacerlo.</Typography>
                         <CounterInfo />
                     </Grid>
                 </Grid>
+                <section className="content1 form-container">
+
+                    <Grid container className={classes.formGrid}>
+                        <Grid item xs={12} md={6} style={{ margin: "3em 0" }}>
+                            <Typography variant="h6" >Nos encantaría saber de usted</Typography>
+                            <Typography variant="body1" className={classes.gray}>¿Buscas buenas soluciones en tu negocio? Deberíamos tener una conversación.</Typography>
+                            <form action="" className="home-form" style={{ margin: "1em 0" }}>
+                                <div>
+                                    <label htmlFor="" style={{ width: "43%" }}> Nombre *
+                                <input type="text" style={{ width: "100%" }} />
+                                    </label>
+                                    <label htmlFor="" style={{ width: "43%" }}> Email *
+                                <input type="text" style={{ width: "100%" }} />
+                                    </label>
+                                </div>
+                                <label htmlFor=""> Mensaje *
+                            <textarea name="" id="" cols="30" rows="10" style={{ width: "90%" }}></textarea>
+                                </label>
+                            </form>
+                            <Button1
+                                text1="Enviar"
+                                text2="mensaje"
+                            />
+                        </Grid>
+                        <Grid item xs={12} md={6}>
+                            <img src={homeForm} alt="" style={{ width: '100%' }} />
+                        </Grid>
+                    </Grid>
+                </section>
             </Grid >
 
             {/* <Grid xs={12} >

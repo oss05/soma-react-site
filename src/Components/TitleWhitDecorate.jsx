@@ -13,6 +13,7 @@ const TitleWhitDecorate = ({ title }) => {
       width: 'auto',
       fontWeight: 'bold',
       borderBottom: `8px solid ${theme.palette.primary.main}`,
+      paddingBottom: 0,
       [theme.breakpoints.down('md')]: {
         fontSize: '35px'
       }
@@ -23,7 +24,7 @@ const TitleWhitDecorate = ({ title }) => {
 
   return (
     <Box className={classes.root}>
-      <Typography className={classes.title} component='span' variant='h3' >
+      <Typography className={classes.title} component='span' variant='h4' >
         {title}
       </Typography>
     </Box>

@@ -69,7 +69,7 @@ const SistemsQuadInfo = ({ img, title, description }) => {
           <Typography className={classes.title} component="h5" variant="h5">
             {title}
           </Typography>
-          <Typography className={classes.subtitle} variant="subtitle1" color="textSecondary">
+          <Typography className={classes.subtitle} variant="p" color="textSecondary">
             {description}
           </Typography>
         </CardContent>

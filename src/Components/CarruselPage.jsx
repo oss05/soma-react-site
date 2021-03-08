@@ -50,7 +50,7 @@ const CarruselPage = ({ imgs }) => {
       <Grid container xs={12} >
         <Grid item xs={12} >
           {
-            <Carousel responsive={responsive}>
+            <Carousel responsive={responsive} autoPlay infinite>
               {imgs.map(img => (
                 <div className={classes.imgContainer} key={img.id}>
                   <img src={img.cover} />

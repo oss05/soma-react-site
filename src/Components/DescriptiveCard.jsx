@@ -3,10 +3,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Box, Card, CardContent, Typography } from '@material-ui/core';
 import InfoVerticalDecorate from './InfoVerticalDecorate';
 
-const DescriptiveCard = ({title,description,logo}) => {
+const DescriptiveCard = ({ title, description, logo }) => {
 
 
-  const useStyles = makeStyles( (theme) => ({
+  const useStyles = makeStyles((theme) => ({
     card: {
       border: '1px solid #DADADA',
       borderRadius: '20px',
@@ -14,7 +14,7 @@ const DescriptiveCard = ({title,description,logo}) => {
       '&:hover': {
         border: '1px solid #00A8BA',
         borderTop: '20px solid #00A8BA',
-        transform: 'scale(1.1)',
+        // transform: 'scale(1.1)',
         '& > div:nth-of-type(1)': {
           display: 'none'
         },
@@ -28,14 +28,14 @@ const DescriptiveCard = ({title,description,logo}) => {
       marginBottom: '10px',
     },
     detailsContainer: {
-      backgroundColor: '#F8F8F8',
+      backgroundColor: '#fff',
       color: '#C4C4C4',
       padding: '50px 20px'
     },
     detailsContainerHover: {
       backgroundColor: 'white',
       color: 'black',
-      padding: '50px',
+      padding: '5px',
       display: 'none'
     },
     logoContainer: {
@@ -59,44 +59,47 @@ const DescriptiveCard = ({title,description,logo}) => {
         objectFit: 'cover'
       }
     },
+    description: {
+      color: theme.palette.text.gray
+    }
   }));
 
   const classes = useStyles();
 
-  return(
-    
-    <Card 
-    className={classes.card} >
-        <CardContent
+  return (
+
+    <Card
+      className={classes.card} >
+      <CardContent
         align="center"
         className={classes.detailsContainer}>
-          <Box
-          className={`${classes.logoContainer}`} 
-          >
-            <img src={logo} />
-          </Box>
-          <Typography className={`${classes.title}`} variant="h5" component="h2" align="center">
-            {title}
-          </Typography>
-          <Typography className={classes.description} component="h2" align="center">
-            {description}
-          </Typography>
-        </CardContent>
+        <Box
+          className={`${classes.logoContainer}`}
+        >
+          <img src={logo} style={{ objectFit: "contain" }} />
+        </Box>
+        <Typography className={`${classes.title}`} variant="h6" component="h2" align="center">
+          {title}
+        </Typography>
+        {/* <Typography className={classes.description} component="h2" align="center">
+          {description}
+        </Typography> */}
+      </CardContent>
 
 
-        <CardContent
+      <CardContent
         align="center"
         className={classes.detailsContainerHover}>
-          <Box
-          className={`${classes.logoContainerHover}`} 
-          >
-            <img src={logo} />
-          </Box>
-          <InfoVerticalDecorate title={title} />
-          <Typography className={classes.description} component="h2" align="center">
-            {description}
-          </Typography>
-        </CardContent>
+        <Box
+          className={`${classes.logoContainerHover}`}
+        >
+          <img src={logo} style={{ objectFit: "contain" }} />
+        </Box>
+        <InfoVerticalDecorate title={title} />
+        <Typography className={classes.description} variant="body2" align="center">
+          {description}
+        </Typography>
+      </CardContent>
     </Card>
   )
 
