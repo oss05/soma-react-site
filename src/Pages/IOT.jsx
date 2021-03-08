@@ -94,6 +94,23 @@ export default function IOT() {
             paddingLeft: 8,
 
         },
+        descriptiveCardContaiener: {
+          [theme.breakpoints.down('md')]: {
+            justifyContent: 'flex-start'
+          },
+          '& > div': {
+            [theme.breakpoints.down('sm')]: {
+              display: 'flex',
+              justifyContent: 'center'
+            },
+          }
+        },
+        itemMobile: {
+          [theme.breakpoints.down('md')]: {
+            display: 'flex',
+            justifyContent: 'center'
+          },
+        }
     }))
 
     const classes = useStyles();
@@ -243,36 +260,36 @@ export default function IOT() {
                         <Typography variant="h4" className={classes.title2} style={{ marginLeft: 30 }}>Descubra las posibilidades y ventajas de disponer de un control y seguridad ilimitado</Typography>
                     </Grid>
                 </Grid>
-                <Grid container justify="space-around" item xs={12} style={{ marginTop: 20 }}>
-                    <Grid item xs={10} md={2} style={{ margin: '1em 0' }}>
+                <Grid container wrap='wrap' className={classes.descriptiveCardContaiener} justify="space-around" item xs={12} style={{ marginTop: 20 }}>
+                    <Grid item xs={12} md={4} lg={2} style={{ margin: '1em 0' }}>
                         <DescriptiveCard
                             logo={instalacion}
                             title="Instalación sin obras"
                             description="La instalación se realiza sin obras.  adaptándonos a la vivienda ya construida"
                         />
                     </Grid>
-                    <Grid item xs={10} md={2} style={{ margin: '1em 0' }}>
+                    <Grid item xs={12} md={4} lg={2} style={{ margin: '1em 0' }}>
                         <DescriptiveCard
                             logo={seguridad}
                             title="Seguridad y videovigilancia"
                             description="La instalación se realiza sin obras.  adaptándonos a la vivienda ya construida"
                         />
                     </Grid>
-                    <Grid item xs={10} md={2} style={{ margin: '1em 0' }}>
+                    <Grid item xs={12} md={4} lg={2} style={{ margin: '1em 0' }}>
                         <DescriptiveCard
                             logo={multimedia}
                             title="Multimedia y control por voz"
                             description="Envíe los contenidos multimedia desde su móvil a televisores, altavoces y proyectores. Controle dispositivos por voz con Alexa y Google home."
                         />
                     </Grid>
-                    <Grid item xs={10} md={2} style={{ margin: '1em 0' }}>
+                    <Grid item xs={12} md={4} lg={2} style={{ margin: '1em 0' }}>
                         <DescriptiveCard
                             logo={accesos}
                             title="Control de accesos"
                             description="Puede ver y hablar a través del móvil con la persona que llama a su videoportero. Puede abrir remotamente cualquier puerta de paso o de garaje."
                         />
                     </Grid>
-                    <Grid item xs={10} md={2} style={{ margin: '1em 0' }}>
+                    <Grid item xs={12} md={4} lg={2} style={{ margin: '1em 0' }}>
                         <DescriptiveCard
                             logo={persianas}
                             title="Control de persianas"
@@ -281,14 +298,14 @@ export default function IOT() {
                     </Grid>
                 </Grid>
                 <Grid container justify="space-around" item xs={12} style={{ marginTop: 60 }}>
-                    <Grid item xs={12} md={5} style={{ margin: '1em 0' }}>
+                    <Grid className={classes.itemMobile} item xs={12} md={5} style={{ margin: '1em 0' }}>
                         <ImageOffsetInfo
                             title='Ahorro enegético'
                             description='El sistema dómotica es capaz de adecuar los gastos de la vivienda al consumo exacto que va a tener, produciendo un ahorro en las facturas de mas de 20% de media por las familias'
                             img={iot11}
                         />
                     </Grid>
-                    <Grid item xs={12} md={5} style={{ margin: '1em 0' }}>
+                    <Grid className={classes.itemMobile} item xs={12} md={5} style={{ margin: '1em 0' }}>
                         <ImageOffsetInfo
                             title='Automatización'
                             description='Configure reglas avanzadas para controlar dispositivos y darle vida a su hogar'

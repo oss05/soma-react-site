@@ -8,9 +8,13 @@ const DescriptiveCard = ({ title, description, logo }) => {
 
   const useStyles = makeStyles((theme) => ({
     card: {
+      boxSizing: 'border-box',
       border: '1px solid #DADADA',
+      width: '230px',
+      height: '400px',
       borderRadius: '20px',
       transition: 'all 600ms ease',
+      cursor: 'pointer',
       '&:hover': {
         border: '1px solid #00A8BA',
         borderTop: '20px solid #00A8BA',
@@ -35,8 +39,9 @@ const DescriptiveCard = ({ title, description, logo }) => {
     detailsContainerHover: {
       backgroundColor: 'white',
       color: 'black',
-      padding: '5px',
-      display: 'none'
+      padding: '5px 20px',
+      display: 'none',
+      
     },
     logoContainer: {
       filter: 'grayscale(100%)',

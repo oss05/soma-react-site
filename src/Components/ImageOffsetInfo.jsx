@@ -7,21 +7,28 @@ import TitleWhitDecorate from './TitleWhitDecorate';
 const ImageOffsetInfo = ({ title, img, description }) => {
 
   const useStyles = makeStyles((theme) => ({
-    root: {
+    roote: {
       boxShadow: '14px 12px 35px rgba(0, 0, 0, 0.2)',
       position: 'relative',
-      padding: '20px',
+      width: '400px',
+      height: '660px',
+      paddingBottom: '0px',
+      padding: '10px 20px',
       borderRadius: '30px',
       marginTop: '100px',
-      paddingBottom: '50px',
-      borderBottom: `10px solid ${theme.palette.primary.main}`
+      borderBottom: `10px solid ${theme.palette.primary.main}`,
+      alignItems: 'flex-start',
+      
+      
+      
     },
     imgContainer: {
-
       width: '100%',
+      height: '200px',
+      position: 'relative',
       '& img': {
         position: 'relative',
-        top: '-30%',
+        top: '-50%',
         borderRadius: '20px',
         width: '100%',
         height: '400px',
@@ -30,14 +37,13 @@ const ImageOffsetInfo = ({ title, img, description }) => {
       },
     },
     detailsContainer: {
+      height: '240px',
       [theme.breakpoints.up('md')]: {
         padding: '0px 50px',
-        marginTop: '-120px'
 
       },
       [theme.breakpoints.down('md')]: {
         padding: '15px',
-        marginTop: '-150px'
       }
     },
     info: {
@@ -52,7 +58,7 @@ const ImageOffsetInfo = ({ title, img, description }) => {
   const classes = useStyles();
 
   return (
-    <Grid container className={classes.root} >
+    <Grid container className={classes.roote} >
       <Grid className={classes.imgContainer} item xs={12} >
         <img src={img} />
       </Grid>
